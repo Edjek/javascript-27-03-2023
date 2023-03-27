@@ -8,7 +8,7 @@ console.log('Bonjour ' + firstname + ', vous avez ' + ages + ' ans');
 // Ecrire un algorithme qui demande à l'utilisateur son prénom et son nom et qui affiche ensuite la phrase
 // "Bonjour prénom votre nom est nom"
 let rename = prompt('Quel est votre nom?');
-console.log('Bonjour prénom votre nom est ' + rename);
+console.log('Bonjour votre nom est ' + rename);
 
 // Quelle sera la valeur de i à la fin de cet algorithme ?
 i = 24;
@@ -64,13 +64,9 @@ let e = 86;
 let f = 56;
 let maximum;
 
-if (d > e) {
+if (d > e && d > f) {
     maximum = d;
-} else {
-    maximum = e;
-}
-
-if (e > f) {
+} else if (e > d && e > f) {
     maximum = e;
 } else {
     maximum = f;
@@ -91,10 +87,12 @@ for (let i = 0; i <= 5; i++) {
 console.log(resultat);
 
 // Ecrire un algorithme qui demande à l'utilisateur un nombre compris entre 0 et 10 jusqu'à ce que la réponse 7 soit donnée.
-let number = prompt('Donnez-moi un nombre compris entre 0 et 10?');
-while (number != 7) {
+let number;
+
+do {
     number = prompt('Donnez-moi un nombre compris entre 0 et 10?');
-}
+} while (number != 7);
+
 console.log('Bien joué le chiffre était 7!');
 
 // Ecrire un algorithme qui fait deviner un chiffre à l'utilisateur en lui indiquant si il est au dessus ou au dessous de 5
@@ -138,7 +136,11 @@ while (popMarrakech > popAgadir) {
     popAgadir += (popAgadir * 8) / 100;
 }
 
-console.log('Dans ' + years + ' ans la population de Agadir dépassera celle de Marrakech');
+console.log(
+    'Dans ' +
+        years +
+        ' ans la population de Agadir dépassera celle de Marrakech'
+);
 
 // Ecrire un algorithme qui calcule la somme des valeurs d'un tableau (boucle for()).
 let notes = [10, 15, 20, 15, 14, 8];

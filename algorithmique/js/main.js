@@ -147,7 +147,7 @@ if (age3 < 18) {
 }
 
 /*
-    L'instruction switch évalue une expression et, 
+    L'instruction switch évalue une expression et 
     selon le résultat obtenu et le cas associé, 
     exécute les instructions correspondantes.
  */
