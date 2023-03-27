@@ -72,7 +72,7 @@ console.log(typeof test);
 // +, -, /, *, %
 
 // let number2 = prompt('Donnez-moi un nombre ?')
-// let number3 =prompt('Donnez-moi un deuxieme nombre ?')
+// let number3 = prompt('Donnez-moi un deuxieme nombre ?')
 // let result = number2 * number3
 // console.log(result);
 
@@ -247,7 +247,6 @@ while (resultat != 7) {
         resultat = prompt('Le nombre est plus grand, donnez-moi un autre chiffre');
     }
 }
-
 console.log('Bravo, le chiffre était 7!');
 
 // do {
