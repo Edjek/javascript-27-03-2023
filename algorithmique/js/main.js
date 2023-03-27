@@ -51,7 +51,7 @@ console.log("Bonjour, je m'appelle " + lastName + ' ' + lastName);
 console.log("Bonjour, je m'appelle " + lastName + ' ' + lastName);
 console.log(`Bonjour, je m'appelle ${lastName} ${firstName}`);
 
-/* --------------- Les Types primitifs --------------*/
+/* --------------- Les Types Primitifs --------------*/
 let string2 = 'Je suis du texte';
 let number = 18;
 let decimal = 20.3;
@@ -68,7 +68,7 @@ console.log(typeof booleen2);
 console.log(typeof nul);
 console.log(typeof test);
 
-/* --------------- Les Opérateurs arithmétiques --------------*/
+/* --------------- Les Opérateurs Arithmétiques --------------*/
 
 // +, -, /, *, %
 
@@ -127,32 +127,38 @@ if (condition >= 18 || permis == true) {
     console.log('Houston, nous avons 2 problèmes');
 }
 
-// /demande a l'utilisateur son age
-// si mineur demande a ses parent l'autorisation
-// si moins de 64 ans droits a des indemnites
-// demande statut
-// si salarié => demander au rh
-// si independant urssaf
-// si a plus de 64 ans désolé vous devriez être à la retraite
+/*
+    Demandez à l'utilisateur son âge
+    si mineur demande a ses parent l'autorisation
+    si moins de 64 ans droits a des indemnites
+        demandez son statut
+        si salarié => demander au rh
+        si independant urssaf
+    si a plus de 64 ans désolé vous devriez être à la retraite
+*/
 
-// let age3 = prompt('Quel est votre age?');
+let age3 = prompt('Quel est votre âge?');
 
-// if (age3 < 18) {
-//     console.log("Demande à tes parents l'autorisation");
-// } else if (age < 64) {
-//     let status = prompt('Quel est votre statut');
+if (age3 < 18) {
+    console.log("Demandez à vos parents l'autorisation d'être sur ce site");
+} else if (age < 64) {
+    let status = prompt('Quel est votre statut');
 
-//     if (status == 'salarié') {
-//         console.log('Demande au RH');
-//     } else if (status == 'indépendants') {
-//         console.log("Demande à l'Urssaf");
-//     }
-// } else if (age >= 64) {
-//         console.log("Vous devriez être à la retraite");
-// }
+    if (status == 'salarié') {
+        console.log("Demandez plus d'infos aux RH");
+    } else if (status == 'indépendants') {
+        console.log("Demandez plus d'info à l'Urssaf");
+    }
+} else if (age >= 64) {
+    console.log('Vous devriez être à la retraite');
+}
 
+/*
+    L'instruction switch évalue une expression et, 
+    selon le résultat obtenu et le cas associé, 
+    exécute les instructions correspondantes.
+ */
 let expr = 'banane';
-
 switch (expr) {
     case 'orange':
         console.log("c'est plein de vitamines C");
