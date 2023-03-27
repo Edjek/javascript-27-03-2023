@@ -28,7 +28,6 @@ let helloWorld = 'Hello world!';
 
 // Affichage d'une variable dans la console
 console.log(uneVariable);
-console.log(helloWorld);
 
 // On peut changer la valeur d'une variable
 helloWorld = 'Coucou';
@@ -36,22 +35,22 @@ helloWorld = 'Coucou';
 // Affectation d'une variable dans une autre variable
 let affectation = helloWorld;
 
-/* --------------- La Concatenation --------------*/
+/* --------------------------- La Concatenation --------------------------- */
 
 // Concaténation (Afficher du texte et des variables)
 let age = 18;
-console.log("J 'ai " + age + ' ans');
+console.log("J'ai " + age + ' ans');
 console.log("J'ai " + age + ' ans');
 console.log(`J'ai ${age} ans `);
 
 let lastName = 'Rachid';
 let firstName = 'EDJEKOUANE';
+console.log("Bonjour, je m'appelle " + firstName + ' ' + lastName);
+console.log("Bonjour, je m'appelle " + firstName + ' ' + lastName);
+console.log(`Bonjour, je m'appelle ${firstName} ${lastName}`);
 
-console.log("Bonjour, je m'appelle " + lastName + ' ' + lastName);
-console.log("Bonjour, je m'appelle " + lastName + ' ' + lastName);
-console.log(`Bonjour, je m'appelle ${lastName} ${firstName}`);
+/* --------------------------- Les Types Primitifs --------------------------- */
 
-/* --------------- Les Types Primitifs --------------*/
 let string2 = 'Je suis du texte';
 let number = 18;
 let decimal = 20.3;
@@ -68,23 +67,17 @@ console.log(typeof booleen2);
 console.log(typeof nul);
 console.log(typeof test);
 
-/* --------------- Les Opérateurs Arithmétiques --------------*/
+/* --------------------------- Les Opérateurs Arithmétiques --------------------------- */
 
 // +, -, /, *, %
 
-// demande a l'utilisateur 2 variables
-// sauvegarder le resultat de la multiplication dans une autre variables
-// afficher
-
-// let number2 = prompt('quel ton nombre ?')
-// console.log(number2);
-// let number3 =prompt('quel ton deuxieme nombre ?')
-// console.log(number3);
-
+// let number2 = prompt('Donnez-moi un nombre ?')
+// let number3 =prompt('Donnez-moi un deuxieme nombre ?')
 // let result = number2 * number3
 // console.log(result);
 
 /* --------------------------- Instructions Conditionnelles --------------------------- */
+
 // Les opérateurs de comparaison (==, !=, >, >=, <, <=)
 
 let condition = 19;
@@ -174,22 +167,15 @@ switch (expr) {
         break;
 }
 
-// Ecrire un algorithme qui inverse les valeurs de deux variables A et B quel que soit le contenu de A et de B
-// avant l'algo afficher 'la variable a vaut: '
-// avant l'algo afficher 'la variable b vaut: '
-// faire la même chose après
+// Ecrire un algorithme qui inverse les valeurs de deux variables a et b quel que soit le contenu de a et de b
 let a = 25;
 let b = 32;
 
-console.log(`la variable a vaut : ${a}`);
-console.log(`la variable b vaut : ${b}`);
-
+console.log(`la variable a vaut : ${a} et la variable b vaut : ${b}`);
 let temp = a;
 a = b;
 b = temp;
-
-console.log(`la variable a vaut : ${a}`);
-console.log(`la variable b vaut : ${b}`);
+console.log(`la variable a vaut : ${a} et la variable b vaut : ${b}`);
 
 // Ecrire un algorithme qui demande à l'utilisateur le prix Hors taxe d'un objet et qui donne sa valeur TTC (multiplier le prix par 1.196).
 // let price = prompt('Quel et le prix HT?');
@@ -236,7 +222,6 @@ console.log(result);
 /* --------------------------- Les Boucles --------------------------- */
 
 // Boucle tant que (while)
-
 let boucle = 120;
 while (boucle <= 10) {
     // boucle = boucle + 1;
@@ -244,33 +229,26 @@ while (boucle <= 10) {
     boucle *= 2;
 }
 
+// Boucle do ... while execute toujours une fois l'instruction avant de la vérifier
 do {
     boucle++;
     console.log(boucle);
 } while (boucle <= 10);
 
-// Ecrire un algorithme qui fait deviner un chiffre à l'utilisateur, déclarer 7, en lui indiquant si il est au dessus ou au dessous de la bonne valeur
-
-// demande un chiffre à l'utilisateur
-// tant que la reponse n'est pas egale 7
-// si c'est plus grand je lui dit plus petit
-// et je redemande un chiffre
-// fin tant que
-
-// Affiche bravo
-
-let resultat = prompt('Donnez moi ta réponse');
-console.log(resultat);
+// Ecrire un algorithme qui fait deviner un chiffre à l'utilisateur, en lui indiquant si il est au dessus ou au dessous de la bonne valeur
+let resultat = prompt('Donnez-moi un chiffre');
 
 while (resultat != 7) {
     if (resultat > 7) {
-        console.log('le nombre est plus petit');
-        resultat = prompt('Donne moi ta réponse');
+        console.log('');
+        resultat = prompt('le nombre est plus petit, donnez-moi un autre chiffre');
     } else {
-        console.log('le nombre est plus grand');
-        resultat = prompt('Donne moi ta réponse');
+        console.log('');
+        resultat = prompt('Le nombre est plus grand, donnez-moi un autre chiffre');
     }
 }
+
+console.log('Bravo, le chiffre était 7!');
 
 // do {
 //     let resultat = prompt('Donnez moi ta réponse');
