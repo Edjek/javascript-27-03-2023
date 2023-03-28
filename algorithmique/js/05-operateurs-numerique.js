@@ -3,22 +3,22 @@
 // +, -, /, *, %
 
 let resultat = 10 + 5; //Addition
-console.log(resultat); //15
+console.log(`le resultat est ${resultat}`); //15
 
 resultat = 10 - 5; //Soustraction
-console.log(resultat); //5
+console.log(`le resultat est ${resultat}`); //5
 
 resultat = 10 * 5; //Multiplication
-console.log(resultat); //50
+console.log(`le resultat est ${resultat}`); //50
 
 resultat = 10 / 5; //Division
-console.log(resultat); //2
+console.log(`le resultat est ${resultat}`); //2
 
 resultat = 10 % 3; //Modulo (=reste division)
 //10 billes à répartir entre 3 personnes => Reste 1
-console.log(resultat); //1
+console.log(`le resultat est ${resultat}`); //1
 
 let number = prompt('Donnez-moi un nombre ?');
 let number2 = prompt('Donnez-moi un deuxieme nombre ?');
 let result = number * number2;
-console.log(result);
+console.log(`le resultat de la multiplication est ${result}`);

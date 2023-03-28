@@ -181,3 +181,15 @@ if (hauteur >= 1 && hauteur <= 10) {
 } else {
     console.log('Le nombre doit être compris entre 1 et 10 !');
 }
+
+// Ecrire le code permettant de recuperer l'animal preferé de  l'utilisateur (if, else if, else)
+let animal = prompt('Quel est votre animal préféré ?');
+if (animal == 'chien' || animal == 'chat') {
+    console.log('Vous aimez les animaux domestiques !');
+} else if (animal == 'lion' || animal == 'tigre') {
+    console.log('Vous aimez les animaux sauvages !');
+} else if (animal == 'otarie' || animal == 'dauphin') {
+    console.log('Vous aimez les animaux marins !');
+} else {
+    console.log('Je ne connais pas cet animal !');
+}

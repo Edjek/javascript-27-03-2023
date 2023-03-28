@@ -78,3 +78,11 @@ let i = g * h;
     'femme' => Afficher dans un alert 'Vous êtes une femme'
     Autre chose => Afficher dans un alert 'Vous n'êtes ni un homme ni une femme'
 */
+
+// Ecrire le code permettant de recuperer l'animal preferé de  l'utilisateur (if, else if, else)
+/*
+    Si il rentre "chat" ou "chien" => "Vous aimez les animaux domestiques !"
+    Si il rentre "lion" ou "tigre" => "Vous aimez les animaux sauvages !"
+    Si il rentre "dauphin" ou "otarie" => "Vous aimez les animaux marins !"
+    Sinon => je ne connais pas cet animal
+*/

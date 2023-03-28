@@ -3,16 +3,13 @@
     --2-- AFFICHAGE
     --3-- VARIABLES
     --4-- CONCATENATION
-    --5-- TYPES DE DONNEES PRIMITIFs
+    --5-- TYPES DE DONNEES
     --6-- OPERATEURS ARITHMETIQUES
     --7-- CONDITIONS
     --8-- OPERATEURS
     --9-- SWITCH
-    --10-- LES BOUCLES
-    --14-- ARRAY (TABLEAU)
-    --15-- OBJECT
-    --12-- LES FONCTIONS PREDEFINIES
-    --13-- FONCTION UTILISATEUR
+    --10-- BOUCLES
+    --11-- FONCTIONS
 */
 
 /* --------------------------- 1 - COMMENTAIRES --------------------------- */
@@ -101,30 +98,30 @@ console.log(typeof booleen2);
 console.log(typeof nul);
 console.log(typeof test);
 
-/* --------------------------- 6 - OPERATEURS ARITHMETIQUE --------------------------- */
+/* --------------------------- OPERATEURS ARITHMETIQUE --------------------------- */
 
 // +, -, /, *, %
 
 let operation = 10 + 5; //Addition
-console.log('operation'); //15
+console.log(`le resultat est ${operation}`); //15
 
 operation = 10 - 5; //Soustraction
-console.log('operation'); //5
+console.log(`le resultat est ${operation}`); //5
 
 operation = 10 * 5; //Multiplication
-console.log('operation'); //50
+console.log(`le resultat est ${operation}`); //50
 
 operation = 10 / 5; //Division
-console.log('operation'); //2
+console.log(`le resultat est ${operation}`); //2
 
 operation = 10 % 3; //Modulo (=reste division)
 //10 billes à répartir entre 3 personnes => Reste 1
-console.log('operation'); //1
+console.log(`le resultat est ${operation}`); //1
 
 let number = prompt('Donnez-moi un nombre ?');
 let number2 = prompt('Donnez-moi un deuxieme nombre ?');
 let result = number * number2;
-console.log('result');
+console.log(`le resultat de la multiplication est ${result}`);
 /* --------------------------- 7 - INSTRUCTION CONDITIONNELLES --------------------------- */
 
 // Les opérateurs de comparaison (==, !=, >, >=, <, <=)
@@ -198,7 +195,9 @@ switch (expr) {
         break;
 }
 
-/* --------------------------- BOUCLES --------------------------- */
+/* --------------------------- 10 - BOUCLES --------------------------- */
+
+//Les boucles sont des structures permettant d'executer plusieurs fois  des instructions.
 
 /*
     la principale différence entre "for" et "while" est que :
@@ -236,7 +235,7 @@ for (let i = 0; i < 10; i++) {
 
 console.log(res);
 
-/* --------------------------- FONCTIONS --------------------------- */
+/* --------------------------- 11 - FONCTIONS --------------------------- */
 
 // Déclaration de fonction
 function add(x, y) {
@@ -247,7 +246,16 @@ function add(x, y) {
 let resultat = add(7, 3);
 console.log(resultat);
 
-// Une procedure ne retourne rien elle execute des actions
+// Une procedure ne retourne rien elle effectuer des actions, des opérations ou des tâches sans renvoyer de résultat.
+// Elle peut également prendre des arguments en entrée pour personnaliser son comportement.
 function helloWorld() {
     console.log('Hello, world!');
 }
+
+// Il est également possible de stocker une fonction dans une variable et de l'appeler en utilisant cette variable
+let multiplier = function (a, b) {
+    return a * b;
+};
+
+let res = multiplier(2, 3);
+console.log(res);
