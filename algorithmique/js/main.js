@@ -237,20 +237,26 @@ console.log(res);
 
 /* --------------------------- 11 - FONCTIONS --------------------------- */
 
+// Une fonction en JavaScript est un bloc de code réutilisable
+// qui peut être appelé à partir d'autres parties de votre code pour effectuer une tâche spécifique.
+// Les fonctions sont un moyen utile de segmenter votre code en tâches plus petites et plus faciles à gérer,
+// et elles vous permettent également de réutiliser le même code plusieurs fois sans avoir à le copier et le coller.
+
 // Déclaration de fonction
+function afficherMessage() {
+    console.log('Bonjour, tout le monde !');
+}
+
+// Une fonction n'est executée que lorsqu'elle est appelée
+afficherMessage();
+
+// Déclaration de fonction avec 2 parametres
 function add(x, y) {
     return x + y;
 }
 
-// Une fonction n'est executée que lorsqu'elle est appelée
 let resultat = add(7, 3);
 console.log(resultat);
-
-// Une procedure ne retourne rien elle effectuer des actions, des opérations ou des tâches sans renvoyer de résultat.
-// Elle peut également prendre des arguments en entrée pour personnaliser son comportement.
-function helloWorld() {
-    console.log('Hello, world!');
-}
 
 // Il est également possible de stocker une fonction dans une variable et de l'appeler en utilisant cette variable
 let multiplier = function (a, b) {

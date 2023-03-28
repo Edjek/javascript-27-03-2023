@@ -4,6 +4,8 @@
 let uneVariable;
 
 // Le mot clé const permet de déclarer des constantes
+// ! Vous ne pouvez pas redéclarer une variable qui existe déjà (si elle a été déclarée avec const)
+
 const constante = 'Je suis une constante, je ne peux pas être modifié!';
 
 // Le mot clé var permet de déclarer des variables
