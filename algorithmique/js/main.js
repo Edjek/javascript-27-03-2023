@@ -1,4 +1,21 @@
-/* --------------------------- Les Commentaires --------------------------- */
+/*
+    --1-- COMMENTAIRES
+    --2-- AFFICHAGE
+    --3-- VARIABLES
+    --4-- CONCATENATION
+    --5-- TYPES DE DONNEES PRIMITIFs
+    --6-- OPERATEURS ARITHMETIQUES
+    --7-- CONDITIONS
+    --8-- OPERATEURS
+    --9-- SWITCH
+    --10-- LES BOUCLES
+    --14-- ARRAY (TABLEAU)
+    --15-- OBJECT
+    --12-- LES FONCTIONS PREDEFINIES
+    --13-- FONCTION UTILISATEUR
+*/
+
+/* --------------------------- 1 - COMMENTAIRES --------------------------- */
 
 // Un commentaire sur une ligne en Javascript
 /* 
@@ -6,7 +23,7 @@
     en Javascript 
 */
 
-/* --------------------------- Affichage --------------------------- */
+/* --------------------------- 2 - AFFICHAGE --------------------------- */
 
 //Afficher des informations dans la console de debbugage du navigateur
 console.log('Hello World!');
@@ -14,12 +31,19 @@ console.log('Hello World!');
 //Afficher une boite de dialogue avec champs à remplir
 // prompt('Quel age avez-vous ?');
 
-/* --------------------------- Les Variables --------------------------- */
+/* --------------------------- 3 - VARIABLES --------------------------- */
 
-//  Déclaration d'une Variable
+//  DECLARATION d'une Variable
 let uneVariable;
 
-// Affectation d'une variable
+// Le mot clé const permet de déclarer des constantes
+const constante = 'Je suis une constante, je ne peux pas être modifié!';
+
+// Le mot clé var permet de déclarer des variables
+// c'est une pratique désuète (c'était la seule façon avant 2015)
+var past = 'je suis dépassé';
+
+// AFFECTATION d'une variable (donne une valeur à une variable)
 uneVariable = 'Je suis une variable!';
 
 // Les 2 se font généralement en même temps
@@ -35,13 +59,13 @@ helloWorld = 'Coucou';
 // Affectation d'une variable dans une autre variable
 let affectation = helloWorld;
 
-/* --------------------------- La Concatenation --------------------------- */
+/* --------------------------- 4 - CONCATENATION --------------------------- */
 
 // Concaténation (Afficher du texte et des variables)
 let age = 18;
 console.log("J'ai " + age + ' ans');
 console.log("J'ai " + age + ' ans');
-console.log(`J'ai ${age} ans `);
+console.log(`J'ai ${age} ans`);
 
 let lastName = 'Rachid';
 let firstName = 'EDJEKOUANE';
@@ -49,15 +73,15 @@ console.log("Bonjour, je m'appelle " + firstName + ' ' + lastName);
 console.log("Bonjour, je m'appelle " + firstName + ' ' + lastName);
 console.log(`Bonjour, je m'appelle ${firstName} ${lastName}`);
 
-/* --------------------------- Les Types Primitifs --------------------------- */
+/* --------------------------- 5 - TYPES DE DONNEES PRIMITIFS --------------------------- */
 
-let string2 = 'Je suis du texte';
-let number = 18;
-let decimal = 20.3;
-let booleen = true;
-let booleen2 = false;
-let nul = null;
-let test;
+let string2 = 'Je suis du texte'; //string
+let nombre = 18; //number
+let decimal = 20.3; //number
+let booleen = true; //boolean
+let booleen2 = false; //boolean
+let nul = null; //null
+let test; //undefined
 
 console.log(typeof string2);
 console.log(typeof number);
@@ -67,20 +91,20 @@ console.log(typeof booleen2);
 console.log(typeof nul);
 console.log(typeof test);
 
-/* --------------------------- Les Opérateurs Arithmétiques --------------------------- */
+/* --------------------------- 6 - OPERATEURS ARITHMETIQUE --------------------------- */
 
 // +, -, /, *, %
 
-// let number2 = prompt('Donnez-moi un nombre ?')
-// let number3 = prompt('Donnez-moi un deuxieme nombre ?')
-// let result = number2 * number3
-// console.log(result);
+let number2 = prompt('Donnez-moi un nombre ?');
+let number3 = prompt('Donnez-moi un deuxieme nombre ?');
+let result = number2 * number3;
+console.log(result);
 
-/* --------------------------- Instructions Conditionnelles --------------------------- */
+/* --------------------------- 7 - INSTRUCTION CONDITIONNELLES --------------------------- */
 
 // Les opérateurs de comparaison (==, !=, >, >=, <, <=)
 
-let condition = 19;
+let condition = 17;
 
 // Si (if)
 if (condition == 18) {
@@ -105,7 +129,9 @@ if (condition == 17) {
     console.log('Houston, nous avons un problème');
 }
 
-// Les opérateurs de comparaison (==, !=, >, >=, <, <=)
+/* --------------------------- 8 - OPERATEURS --------------------------- */
+
+// Les opérateurs de comparaison (==, ===, !=, !==, >, >=, <, <=)
 if (condition >= 18) {
     console.log('Tu es majeur, bravo');
 } else {
@@ -114,44 +140,20 @@ if (condition >= 18) {
 
 // Les opérateurs logique OU (||) et ET (&&)
 let permis = true;
-if (condition >= 18 || permis == true) {
+if (condition >= 18 || (permis == true && test === 'toto')) {
     console.log('Tu es majeur et tu as le permis');
 } else {
     console.log('Houston, nous avons 2 problèmes');
 }
 
-/*
-    Demandez à l'utilisateur son âge
-    si mineur demande a ses parent l'autorisation
-    si moins de 64 ans droits a des indemnites
-        demandez son statut
-        si salarié => demander au rh
-        si independant urssaf
-    si a plus de 64 ans désolé vous devriez être à la retraite
-*/
-
-let age3 = prompt('Quel est votre âge?');
-
-if (age3 < 18) {
-    console.log("Demandez à vos parents l'autorisation d'être sur ce site");
-} else if (age < 64) {
-    let status = prompt('Quel est votre statut');
-
-    if (status == 'salarié') {
-        console.log("Demandez plus d'infos aux RH");
-    } else if (status == 'indépendants') {
-        console.log("Demandez plus d'info à l'Urssaf");
-    }
-} else if (age >= 64) {
-    console.log('Vous devriez être à la retraite');
-}
-
+/* --------------------------- 9 - CONDITION SWITCH --------------------------- */
 /*
     L'instruction switch évalue une expression et 
     selon le résultat obtenu et le cas associé, 
     exécute les instructions correspondantes.
  */
 let expr = 'banane';
+
 switch (expr) {
     case 'orange':
         console.log("c'est plein de vitamines C");
@@ -162,93 +164,65 @@ switch (expr) {
     case 'banane':
         console.log("c'est plein de potassium");
         break;
+    case 'kiwi':
+    case 'papaye':
+        console.log("c'est un fruit exotique");
+        break;
     default:
         console.log('je ne connais pas ce fruit');
         break;
 }
 
-// Ecrire un algorithme qui inverse les valeurs de deux variables a et b quel que soit le contenu de a et de b
-let a = 25;
-let b = 32;
+/* --------------------------- BOUCLES --------------------------- */
 
-console.log(`la variable a vaut : ${a} et la variable b vaut : ${b}`);
-let temp = a;
-a = b;
-b = temp;
-console.log(`la variable a vaut : ${a} et la variable b vaut : ${b}`);
+/*
+    la principale différence entre "for" et "while" est que :
+    "for" est généralement utilisé lorsque le nombre d'itérations est connu à l'avance,
+    "while" est utilisé lorsque le nombre d'itérations est inconnu à l'avance et dépend d'une condition spécifique.
+*/
 
-// Ecrire un algorithme qui demande à l'utilisateur le prix Hors taxe d'un objet et qui donne sa valeur TTC (multiplier le prix par 1.196).
-// let price = prompt('Quel et le prix HT?');
-// console.log(price * 1.196);
+// BOUCLE while(){...} (tant que)
+let boucle = 5;
 
-// price = price * 1.196;
-
-// Écrire un algorithme qui calcule la moyenne de trois nombres a, b et c. Le résultat sera stocké dans une variable m. Puis l'afficher
-let c = 12;
-let d = 17;
-let e = 12;
-let m = (c + d + e) / 3;
-
-console.log(m);
-
-// Écrire un algorithme qui renvoie le max de deux nombres x et y. Le résultat sera stocké dans une variable max.
-let x = 45;
-let y = 65;
-let max;
-
-if (x > y) {
-    max = x;
-} else {
-    max = y;
-}
-console.log(max);
-
-// Écrire un algorithme qui stocke dans une variable max le maximum de trois variables a, b et c données.
-let l = 19;
-let k = 67;
-let n = 87;
-let result;
-
-if (l > k && l > n) {
-    result = l;
-} else if (k > l && k > n) {
-    result = k;
-} else {
-    result = n;
-}
-
-console.log(result);
-
-/* --------------------------- Les Boucles --------------------------- */
-
-// Boucle tant que (while)
-let boucle = 120;
 while (boucle <= 10) {
-    // boucle = boucle + 1;
+    console.log(boucle);
+    boucle = boucle + 1;
+
+    // SUCRE SYNTAXIQUE (version raccourci de boucle = boucle + 1)
     // boucle++;
-    boucle *= 2;
+    // boucle += 2;
 }
 
-// Boucle do ... while execute toujours une fois l'instruction avant de la vérifier
+// BOUCLE do{...}while() execute toujours une fois l'instruction avant de vérifier la condition
 do {
     boucle++;
     console.log(boucle);
 } while (boucle <= 10);
 
-// Ecrire un algorithme qui fait deviner un chiffre à l'utilisateur, en lui indiquant si il est au dessus ou au dessous de la bonne valeur
-let resultat = prompt('Donnez-moi un chiffre');
+// Boucle (For)
+let combien = 9;
 
-while (resultat != 7) {
-    if (resultat > 7) {
-        console.log('');
-        resultat = prompt('le nombre est plus petit, donnez-moi un autre chiffre');
-    } else {
-        console.log('');
-        resultat = prompt('Le nombre est plus grand, donnez-moi un autre chiffre');
-    }
+for (let i = 0; i < 10; i++) {
+    let res = i * combien;
+    console.log(
+        `${res} la table de multiplication de ${combien} : ${combien} * ${i} = ${res}`
+    );
 }
-console.log('Bravo, le chiffre était 7!');
 
-// do {
-//     let resultat = prompt('Donnez moi ta réponse');
-// } while (resultat != 7);
+console.log(res);
+
+/* --------------------------- FONCTIONS --------------------------- */
+
+// Déclaration de fonction
+function add(x, y) {
+    return x + y;
+}
+
+// Une fonction n'est executée que lorsqu'elle est appelée
+let resultat = add(7, 3);
+console.log(resultat);
+
+// Une procedure ne retourne rien elle execute des actions
+function helloWorld() {
+    console.log('Hello, world!');
+}

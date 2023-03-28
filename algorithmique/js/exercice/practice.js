@@ -53,3 +53,28 @@ let i = g * h;
 // chiffres = [10, 15, 20, 15, 14, 8]
 
 // Algorithme Somme et Moyenne des Notes
+
+
+/*  ---------------------------  Nouveaux Exercices d'Algorithmique ---------------------------*/
+
+// Écrire un programme qui affiche les nombres de 1 à 10 avec la boucle for.
+
+// Écrire un programme qui utilise une boucle while pour afficher les nombres de 1 à 5.
+
+// Écrire un programme qui affiche tous les nombres pairs entre 0 et 100 inclus en utilisant une boucle for. 
+
+// Écrire un programme qui demande à l'utilisateur de saisir un nombre entier compris entre 1 et 10.
+// Si la réponse n'est pas entre 1 et 10, afficher que le message devait être compris entre 1 et 10
+// Le programme doit ensuite dessiner un sapin de Noël composé d'étoiles (*) 
+// *
+// **
+// ***
+// ****
+// *****
+
+// Ecrire le code permettant de récuperer le sexe de l'utilisateur puis afficher avec switch:
+/*
+    'homme' => Afficher dans un alert 'Vous êtes un homme'
+    'femme' => Afficher dans un alert 'Vous êtes une femme'
+    Autre chose => Afficher dans un alert 'Vous n'êtes ni un homme ni une femme'
+*/

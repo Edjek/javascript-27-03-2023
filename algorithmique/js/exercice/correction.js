@@ -11,7 +11,7 @@ let rename = prompt('Quel est votre nom?');
 console.log('Bonjour votre nom est ' + rename);
 
 // Quelle sera la valeur de i à la fin de cet algorithme ?
-i = 24;
+// i = 24;
 
 // Ecrire un algorithme qui inverse les valeurs de deux variables A et B quel que soit le contenu de A et de B
 let j = 18;
@@ -149,3 +149,35 @@ for (let i = 0; i < notes.length; i++) {
     response = response + notes[i];
 }
 console.log(response);
+
+/*  --------------------------- Correction Nouveau Exercice d'Algorithmique ---------------------------*/
+
+// Écrire un programme qui affiche les nombres de 1 à 10 avec la boucle for.
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+// Écrire un programme qui utilise une boucle while pour afficher les nombres de 1 à 5.
+let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+
+// Écrire un programme qui affiche tous les nombres pairs entre 0 et 100 inclus en utilisant une boucle for.
+for (let i = 0; i <= 100; i += 2) {
+    console.log(i);
+}
+
+let hauteur = prompt('Entrez un nombre entre 1 et 10 : ');
+
+if (hauteur >= 1 && hauteur <= 10) {
+    let star = '*';
+    for (let i = 0; i < hauteur; i++) {
+        console.log(star);
+        star = star + '*';
+    }
+} else {
+    console.log('Le nombre doit être compris entre 1 et 10 !');
+}
