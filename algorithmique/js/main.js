@@ -75,13 +75,16 @@ console.log(`Bonjour, je m'appelle ${firstName} ${lastName}`);
 
 /* --------------------------- 5 - TYPES DE DONNEES PRIMITIFS --------------------------- */
 
-let string2 = 'Je suis du texte'; //string
+// Chaine de cactères (String)
+let string2 = 'Je suis du texte';
 
 //Tous les types d'ecritures numériques sont possibles (positif, negatif,decimal)
 let nombre = 18; //number
 let decimal = 20.3; //number
 let negatif = -10;
 
+// Booléens (Boolean)
+// Variable de type booleen n'a que 2 valeurs possibles : TRUE ou FALSE
 let booleen = true; //boolean
 let booleen2 = false; //boolean
 
@@ -89,6 +92,7 @@ let nul = null; //null
 
 let test; //undefined
 
+// La methode typeof() renvoie le type de donnée de la variable
 console.log(typeof string2);
 console.log(typeof number);
 console.log(typeof decimal);
@@ -101,11 +105,26 @@ console.log(typeof test);
 
 // +, -, /, *, %
 
-let number2 = prompt('Donnez-moi un nombre ?');
-let number3 = prompt('Donnez-moi un deuxieme nombre ?');
-let result = number2 * number3;
-console.log(result);
+let operation = 10 + 5; //Addition
+console.log('operation'); //15
 
+operation = 10 - 5; //Soustraction
+console.log('operation'); //5
+
+operation = 10 * 5; //Multiplication
+console.log('operation'); //50
+
+operation = 10 / 5; //Division
+console.log('operation'); //2
+
+operation = 10 % 3; //Modulo (=reste division)
+//10 billes à répartir entre 3 personnes => Reste 1
+console.log('operation'); //1
+
+let number = prompt('Donnez-moi un nombre ?');
+let number2 = prompt('Donnez-moi un deuxieme nombre ?');
+let result = number * number2;
+console.log('result');
 /* --------------------------- 7 - INSTRUCTION CONDITIONNELLES --------------------------- */
 
 // Les opérateurs de comparaison (==, !=, >, >=, <, <=)
