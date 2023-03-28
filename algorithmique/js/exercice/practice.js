@@ -86,3 +86,5 @@ let i = g * h;
     Si il rentre "dauphin" ou "otarie" => "Vous aimez les animaux marins !"
     Sinon => je ne connais pas cet animal
 */
+
+// Écrire une fonction appelée "calculerMoyenne" qui prend trois nombres en entrée et retourne la moyenne de ces nombres.

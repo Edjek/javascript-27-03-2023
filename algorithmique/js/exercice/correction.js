@@ -193,3 +193,14 @@ if (animal == 'chien' || animal == 'chat') {
 } else {
     console.log('Je ne connais pas cet animal !');
 }
+
+// Écrire une fonction appelée "calculerMoyenne" qui prend trois nombres en entrée et retourne la moyenne de ces nombres.
+function calculerMoyenne(nombre1, nombre2, nombre3) {
+    let somme = nombre1 + nombre2 + nombre3;
+    let moyenne = somme / 3;
+    return moyenne;
+}
+
+// exemple d'utilisation de la fonction
+let moyenne = calculerMoyenne(5, 10, 15);
+console.log(moyenne); // devrait afficher 10
