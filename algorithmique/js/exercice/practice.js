@@ -88,8 +88,16 @@ let i = g * h;
 
 // Écrire une fonction appelée "calculerMoyenne" qui prend trois nombres en entrée et retourne la moyenne de ces nombres.
 
-// fEcrire une fonction prenant un parametre et qui verifie si 'utilisateur est majeur
+// Ecrire une fonction prenant un parametre et qui verifie si 'utilisateur est majeur
 /*
     si majeur retourner true
     sinon retourne false
+*/
+
+/*
+    Créer une fonction permettant de :
+        Recuperer le nom, le prenom et l'age de l'utilisateur
+        Stocker ces informations dans un tableau -> Le nom doit être en MAJUSCULES -> Le prenom doit etre en MINUSCULES
+        Afficher le tableau dans la console
+        Retourner le tableau
 */

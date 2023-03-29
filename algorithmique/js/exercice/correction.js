@@ -222,17 +222,14 @@ function isLegal(age) {
 }
 
 let legal = isLegal(age);
-
 console.log(legal);
 
-
-
 /*
-Exo : Créer une fonction permettant de :
-    Recuperer le nom, le prenom et l'age de l'utilisateur
-    Stocker ces informations dans un tableau -> Le nom doit être en MAJUSCULES -> Le prenom doit etre en MINUSCULES
-    Afficher le tableau dans la console
-    A partir de votre tableau , afficher sur la page : "Vous vous appelez [prenom] [nom] est vous avez [age] ans"
+    Créer une fonction permettant de :
+        Recuperer le nom, le prenom et l'age de l'utilisateur
+        Stocker ces informations dans un tableau -> Le nom doit être en MAJUSCULES -> Le prenom doit etre en MINUSCULES
+        Afficher le tableau dans la console
+        Retourner le tableau
 */
 function tableau() {
     //Je crée un tableau vide
