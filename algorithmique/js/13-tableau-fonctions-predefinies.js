@@ -1,32 +1,31 @@
-/* --------------------------- 13 - FONCTIONS PREDEFINIES POUR LES TABLEAUX  --------------------------- */
+/* --------------------------- FONCTIONS PREDEFINIES - TABLEAUX --------------------------- */
+// ! Attention la plupart des methodes modifient le tableau de départ
 
-// Ajouter un ou plusieurs éléments à la fin du tableau 
-fruits.push('orange', 'cerise')
-console.log(fruits);
+let fruits = ['banane', 'fraise', 'pomme', 'kiwi'];
 
+// Ajouter un ou plusieurs éléments à la fin du tableau
+fruits.push('orange', 'cerise');
 // Supprimer le dernier élément du tableau
-fruits.pop()
-console.log(fruits);
+fruits.pop();
 
 // Ajouter un ou plusieurs éléments au début du tableau
-fruits.unshift('abricot')
-
+fruits.unshift('abricot');
 // Supprimer le premier élément du tableau
-fruits.shift()
+fruits.shift();
 
 // Renvoie une copie d'une partie du tableau
+// Premier paramètre l'indice de départ
+// Deuxième paramètre l'indice de fin exclu
 console.log(fruits.slice(1, 3));
 
-// Retourner dans un nouveau tableaux les tableaux fusionnés 
-const array = fruits.concat(week)
+// Modifier ou Ajouter  ou Supprimer un element dans le tableau
 
-// Modifier ou ajouter un element dans le tableau
-console.log(`mon tableau avant splice() ${fruits}`);
-fruits.splice(1,0,'Mangue')
-console.log(`mon tableau après splice() ${fruits}`);
+// Ajouter
+fruits.splice(1, 0, 'Mangue');
+//Modifier
+fruits.splice(2, 1, 'Melon');
+// Supprimer
+fruits.splice(2, 1);
 
-fruits.splice(2, 1, 'Melon' )
-console.log(fruits);
-
-fruits.splice(2, 1)
-console.log(fruits);
+// On peut concaténer deux tableaux (retourne un nouveau tableaux)
+const array = fruits.concat(week);

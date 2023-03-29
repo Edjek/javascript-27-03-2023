@@ -210,7 +210,6 @@ console.log(moyenne); // devrait afficher 10
     si majeur retourner true
     sinon retourne false
 */
-
 let age = prompt('Quel est ton age ?');
 
 function isLegal(age) {
@@ -223,6 +222,24 @@ function isLegal(age) {
 
 let legal = isLegal(age);
 console.log(legal);
+
+// Declarer un tableau contenant (Paris, Berlin, Rome, Moscou, Londres, Madrid)
+/*
+    Creer une fonction qui :
+        retirer Madrid
+        ajouter au debut Vienne
+        Rome devient Alger
+        Afficher le tableau
+*/
+const cities = ['Paris', 'Berlin', 'Rome', 'Moscou', 'Londres', 'Madrid'];
+
+function modifyCities() {
+    cities.pop();
+    cities.unshift('Vienne');
+    cities[3] = 'Alger';
+    console.log(cities);
+}
+modifyCities();
 
 /*
     Créer une fonction permettant de :
