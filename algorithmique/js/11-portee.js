@@ -17,11 +17,10 @@ function scope() {
 console.log(x); // génère une erreur : x n'est pas défini dans le scope global
 
 // PORTEE DE BLOCK
-// La portée d'une variable déclarée à l'intérieur d'un bloc est limitée à ce bloc.
+// La portée d'une variable déclarée à l'intérieur d'un bloc est limitée à ce bloc (if ou boucle).
 // Cela signifie que la variable ne sera pas accessible en dehors de ce bloc.
 if (true) {
     let x = 10;
     console.log(x); // affiche 10
 }
 console.log(x); // génère une erreur : x n'est pas défini dans le scope global
-

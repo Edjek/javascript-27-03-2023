@@ -13,6 +13,9 @@
     --12-- TABLEAUX
     --13-- FONCTIONS PREDEFINIES POUR LES TABLEAUX
     --14-- FONCTIONS PREDEFINIES
+    --15-- OBJETS
+    --16-- CALLBACK
+    --17-- FONCTIONS AVANCEES
 */
 
 /* --------------------------- 1 - COMMENTAIRES --------------------------- */
@@ -304,7 +307,7 @@ if (true) {
 }
 console.log(x); // génère une erreur : x n'est pas défini dans le scope global
 
-/* --------------------------- 13 - TABLEAUX --------------------------- */
+/* --------------------------- TABLEAUX --------------------------- */
 
 // Un tableau (array) est un type de donnée qui peut contenir plusieurs éléments
 // On peut créer un tableau en utilisant des crochets [] et en y insérant les éléments séparés par des virgules.
@@ -356,3 +359,77 @@ let notes = [
 ];
 // Pour acceder à un valeur bien penser à cibler l'index dans l'index
 console.log(notes[0][1]);
+
+/* --------------------------- 14 - FONCTIONS PREDEFINIES --------------------------- */
+
+const message = 'je suis un bout de texte';
+
+console.log(message.length);
+
+// Transformer du texte en majuscule
+console.log(message.toUpperCase());
+
+// Attention la variable d'origine n'est pas modifié
+const messageUppercase = message.toUpperCase();
+
+// Transformer du texte en minuscule
+console.log(messageUppercase.toLowerCase());
+
+// Convertir une chaîne de caractères en un nombre entier.
+const entier = parseInt('42', 10);
+console.log(entier); // affiche 42 dans la console
+
+// Convertir une chaîne de caractères en un nombre décimal.
+const prix = parseFloat('3.99');
+console.log(prix); // affiche 3.99 dans la console
+
+/* --------------------------- 15 - OBJETS --------------------------- */
+
+// Les objets sont des structures de données complexes qui permettent de stocker des valeurs et des fonctions ensemble.
+let personn = {
+    name: 'rachid',
+    setName: function (name) {
+        this.name = name;
+        console.log(this);
+    },
+};
+personn.setName('toto');
+
+console.log(personn.name);
+console.log(personn['name']);
+
+/* --------------------------- 16 - CALLBACKS --------------------------- */
+
+// Les objets sont des structures de données complexes qui permettent de stocker des valeurs et des fonctions ensemble.
+
+function add(a) {
+    return a + 10;
+}
+
+function divide(a) {
+    return a / 2;
+}
+
+function multiply(a) {
+    return a * 2;
+}
+
+function math(number, callback) {
+    let variable = 1;
+    return callback(number, variable);
+}
+
+let calcul = math(12, function (a, b) {
+    console.log(b);
+    return a + b;
+});
+
+console.log(calcul);
+
+/* --------------------------- 17 - FONCTIONS AVANCEES --------------------------- */
+
+const fruitsVitamines = ['pomme', 'banane', 'orange', 'kiwi'];
+
+fruitsVitamines.forEach(function (fruit) {
+    console.log(fruit);
+});
