@@ -234,7 +234,6 @@ Exo : Créer une fonction permettant de :
     Afficher le tableau dans la console
     A partir de votre tableau , afficher sur la page : "Vous vous appelez [prenom] [nom] est vous avez [age] ans"
 */
-
 function tableau() {
     //Je crée un tableau vide
     let infos = [];
@@ -257,6 +256,5 @@ function tableau() {
     console.log(infos);
 
     //J'ecris ma phrase sur la page en appelant chaque information par son index
-    return document.write(`Vous vous appelez ${infos[0]} ${infos[1]}
-et vous avez ${infos[2]} ans`);
+    return infos;
 }
