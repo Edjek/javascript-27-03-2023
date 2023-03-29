@@ -1,4 +1,4 @@
-/* --------------------------- 17 - FONCTIONS AVANCEES --------------------------- */
+/* --------------------------- FONCTIONS AVANCEES --------------------------- */
 
 const fruits = ['pomme', 'banane', 'orange', 'kiwi'];
 

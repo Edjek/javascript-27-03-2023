@@ -19,13 +19,15 @@ fruits.shift();
 console.log(fruits.slice(1, 3));
 
 // Modifier ou Ajouter  ou Supprimer un element dans le tableau
-
 // Ajouter
 fruits.splice(1, 0, 'Mangue');
 //Modifier
 fruits.splice(2, 1, 'Melon');
 // Supprimer
 fruits.splice(2, 1);
+
+// Réorganise le tableau de la fin vers le début
+fruits.reverse()
 
 // On peut concaténer deux tableaux (retourne un nouveau tableaux)
 const array = fruits.concat(week);
