@@ -54,18 +54,17 @@ let i = g * h;
 
 // Algorithme Somme et Moyenne des Notes
 
-
 /*  ---------------------------  Nouveaux Exercices d'Algorithmique ---------------------------*/
 
 // Écrire un programme qui affiche les nombres de 1 à 10 avec la boucle for.
 
 // Écrire un programme qui utilise une boucle while pour afficher les nombres de 1 à 5.
 
-// Écrire un programme qui affiche tous les nombres pairs entre 0 et 100 inclus en utilisant une boucle for. 
+// Écrire un programme qui affiche tous les nombres pairs entre 0 et 100 inclus en utilisant une boucle for.
 
 // Écrire un programme qui demande à l'utilisateur de saisir un nombre entier compris entre 1 et 10.
 // Si la réponse n'est pas entre 1 et 10, afficher que le message devait être compris entre 1 et 10
-// Le programme doit ensuite dessiner un sapin de Noël composé d'étoiles (*) 
+// Le programme doit ensuite dessiner un sapin de Noël composé d'étoiles (*)
 // *
 // **
 // ***
@@ -88,3 +87,9 @@ let i = g * h;
 */
 
 // Écrire une fonction appelée "calculerMoyenne" qui prend trois nombres en entrée et retourne la moyenne de ces nombres.
+
+// fEcrire une fonction prenant un parametre et qui verifie si 'utilisateur est majeur
+/*
+    si majeur retourner true
+    sinon retourne false
+*/

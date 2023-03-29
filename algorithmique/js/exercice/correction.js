@@ -204,3 +204,23 @@ function calculerMoyenne(nombre1, nombre2, nombre3) {
 // exemple d'utilisation de la fonction
 let moyenne = calculerMoyenne(5, 10, 15);
 console.log(moyenne); // devrait afficher 10
+
+// fEcrire une fonction prenant un parametre et qui verifie si 'utilisateur est majeur
+/*
+    si majeur retourner true
+    sinon retourne false
+*/
+
+let age = prompt('Quel est ton age ?');
+
+function isLegal(age) {
+    if (age >= 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+let legal = isLegal(age);
+
+console.log(legal);

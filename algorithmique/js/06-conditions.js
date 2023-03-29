@@ -4,11 +4,15 @@
 
 let condition = 17;
 
+// Si la condition est vraie, le bloc d'instructions est exécuté
+// sinon il est ignoré
 // Si (if)
 if (condition == 18) {
     console.log('tout est ok');
 }
 
+// Si la condition est vraie, le premier bloc d'instructions est exécuté
+// sinon c'est le 2ième bloc qui est exécuté
 // Si, Sinon (if, else)
 if (condition == 17) {
     console.log('tout est ok');
