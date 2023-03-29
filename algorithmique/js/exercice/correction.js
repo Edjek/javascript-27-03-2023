@@ -205,7 +205,7 @@ function calculerMoyenne(nombre1, nombre2, nombre3) {
 let moyenne = calculerMoyenne(5, 10, 15);
 console.log(moyenne); // devrait afficher 10
 
-// fEcrire une fonction prenant un parametre et qui verifie si 'utilisateur est majeur
+// Ecrire une fonction prenant en parametre l'age de l'utilisateur et qui verifie s'il est majeur
 /*
     si majeur retourner true
     sinon retourne false
@@ -224,3 +224,39 @@ function isLegal(age) {
 let legal = isLegal(age);
 
 console.log(legal);
+
+
+
+/*
+Exo : Créer une fonction permettant de :
+    Recuperer le nom, le prenom et l'age de l'utilisateur
+    Stocker ces informations dans un tableau -> Le nom doit être en MAJUSCULES -> Le prenom doit etre en MINUSCULES
+    Afficher le tableau dans la console
+    A partir de votre tableau , afficher sur la page : "Vous vous appelez [prenom] [nom] est vous avez [age] ans"
+*/
+
+function tableau() {
+    //Je crée un tableau vide
+    let infos = [];
+
+    //Je crée les variables dans lesquelles je stocke les reponses de l'utilisateur
+    let prenom = prompt('Quel est votre prenom ?'),
+        nom = prompt('Quel est votre nom ?'),
+        age = prompt('Quel est age avez-vous ?');
+
+    //J'effectue les modifications
+    prenom = prenom.toLowerCase();
+    nom = nom.toUpperCase();
+
+    //J'ajoute les variables à mon tableau
+    infos.push(prenom);
+    infos.push(nom);
+    infos.push(age);
+
+    //J'affiche mon tableau dans la console
+    console.log(infos);
+
+    //J'ecris ma phrase sur la page en appelant chaque information par son index
+    return document.write(`Vous vous appelez ${infos[0]} ${infos[1]}
+et vous avez ${infos[2]} ans`);
+}
