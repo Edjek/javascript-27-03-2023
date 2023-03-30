@@ -4,22 +4,26 @@
 let fruits = ['banane', 'fraise', 'pomme', 'kiwi'];
 
 // Ajouter un ou plusieurs éléments à la fin du tableau
+// renvoie la nouvelle longueur du tableau
 fruits.push('orange', 'cerise');
 // Supprimer le dernier élément du tableau
+// renvoie l'élément supprimé.
 fruits.pop();
 
 // Ajouter un ou plusieurs éléments au début du tableau
+// renvoie la nouvelle longueur du tableau
 fruits.unshift('abricot');
 // Supprimer le premier élément du tableau
+// renvoie l'élément supprimé
 fruits.shift();
 
 // Renvoie une copie d'une partie du tableau
-// Premier paramètre l'indice de départ
-// Deuxième paramètre l'indice de fin exclu
+// ne modifie pas le tableau original
 let newFruits = fruits.slice(1, 3);
 console.log(newFruits);
 
 // Modifier ou Ajouter  ou Supprimer un element dans le tableau
+// renvoie les éléments supprimés
 // Ajouter
 fruits.splice(1, 0, 'Mangue');
 //Modifier
@@ -29,13 +33,12 @@ fruits.splice(2, 1);
 
 // Réorganise le tableau de la fin vers le début
 fruits.reverse();
-
 console.log(fruits);
 
 // Renvoie une copie du tableau sous forme string chainé par le caractère choisi
 console.log(fruits.join(''));
 
-// retourne un tableau
+// divise une chaîne de caractères dans un tableau et retourne le tableau.
 let id = 'rachid-edjekouane';
 let array = id.split('-');
 console.log(array);
