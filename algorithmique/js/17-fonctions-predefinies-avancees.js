@@ -1,5 +1,8 @@
 /* --------------------------- FONCTIONS AVANCEES --------------------------- */
 
+/*
+    Pour les tableaux
+*/
 const animals = ['tigre', 'loup', 'chouette', 'ours'];
 
 for (let i = 0; i < animals.length; i++) {
@@ -11,10 +14,13 @@ for (let i = 0; i < animals.length; i++) {
 animals.forEach((animal) => console.log(animal));
 
 //  for...of  permet de parcourir les éléments d'un objet itérable (ex: tableau, string)
-for(let animal of animals){
+for (let animal of animals) {
     console.log(animal);
 }
 
+/*
+    Pour les objets
+*/
 const person = {
     firstName: 'John',
     lastName: 'Doe',
@@ -22,6 +28,6 @@ const person = {
 };
 
 // for...in permet de parcourir les propriétés énumérables d'un objet
-for(let key in person){
+for (let key in person) {
     console.log(`${key} : ${person[key]}`);
 }
