@@ -387,3 +387,124 @@ console.log(entier); // affiche 42 dans la console
 // Convertir une chaîne de caractères en un nombre décimal.
 const prix = parseFloat('3.99');
 console.log(prix); // affiche 3.99 dans la console
+
+/* --------------------------- 15 - Objets --------------------------- */
+
+// Les objets sont des structures de données complexes qui permettent de stocker des valeurs et des fonctions ensemble.
+
+const person = {
+    firstName: 'rachid',
+    lastName: 'edjekouane',
+    notes: [10, 12, 19, 20],
+    getFirstName: function () {
+        return this.firstName;
+    },
+    job: {
+        name: 'Informaticien',
+        hour: 35,
+    },
+    brother: {
+        firstName: 'malik',
+        lastName: 'edjekouane',
+    },
+};
+
+// Pour acceder à la une propriété d'un objet
+person.job.name = 'developpeur';
+
+let hello = `Bonjour je m'appelle ${person.firstName} j'ai eu ${person.notes[2]} à mon dernier devoir,
+mon plus jeune frère s'appelle ${person.brother.firstName}`;
+console.log(hello);
+
+// Ajoute la propriete adress à l'objet OU modifie sa valeur si elle existe déjà
+person.adress = '2 rue guy de maupassant';
+person.sport = 'climbing';
+
+person.notes.push(123);
+console.log(person.notes);
+
+// Autre façon d'afficher la propriété d'un objet
+let key = 'firstName';
+console.log(person[key]);
+
+const sangoku = {
+    firstName: 'san',
+    lastName: 'goku',
+    children: ['gohan', 'goten'],
+    age: 39,
+    presentation: function () {
+        return `Bonjour je m'appelle ${this.firstName} ${this.lastName} et jai ${this.children.length} enfants `;
+    },
+};
+
+hello = `${sangoku.presentation()} Ils s'appellent ${sangoku.children[0].toUpperCase()} et ${sangoku.children[1].toUpperCase()}`;
+console.log(message);
+
+for (let key in sangoku) {
+    console.log(`${key} : ${sangoku[key]}`);
+}
+
+/* --------------------------- 16 - CALLBACK --------------------------- */
+
+// Un  callback (fonction de rappel ) est une fonction qui est passée en tant qu'argument à une autre fonction.
+function mathematique(x, y, callback) {
+    return callback(x, y);
+}
+
+function add(x, y) {
+    return x + y;
+}
+
+function divide(x, y) {
+    return x / y;
+}
+
+function multiply(x, y) {
+    return x * y;
+}
+
+console.log(mathematique(12, 13, add));
+console.log(mathematique(12, 13, multiply));
+
+// Nous pouvons donc passer en argument une fonction anonyme
+const calcul = mathematique(12, 13, function (a, b) {
+    return a * b * (a + b);
+});
+
+console.log(calcul);
+
+mathematique(12, 13, multiply);
+
+/* --------------------------- 17 - FONCTIONS AVANCEES --------------------------- */
+
+/*
+    Pour les tableaux
+*/
+const animals = ['tigre', 'loup', 'chouette', 'ours'];
+
+for (let i = 0; i < animals.length; i++) {
+    console.log(animals[1]);
+}
+
+// forEach est une méthode JavaScript qui permet d'itérer sur les éléments d'un tableau
+// et d'exécuter une fonction donnée pour chaque élément.
+animals.forEach((animal) => console.log(animal));
+
+//  for...of  permet de parcourir les éléments d'un objet itérable (ex: tableau, string)
+for (let animal of animals) {
+    console.log(animal);
+}
+
+/*
+    Pour les objets
+*/
+const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 30,
+};
+
+// for...in permet de parcourir les propriétés énumérables d'un objet
+for (let key in person) {
+    console.log(`${key} : ${person[key]}`);
+}
