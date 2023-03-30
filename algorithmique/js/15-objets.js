@@ -9,6 +9,10 @@ const person = {
     getFirstName: function () {
         return this.firstName;
     },
+    job: {
+        name: 'Informaticien',
+        hour: 35,
+    },
     brother: {
         firstName: 'malik',
         lastName: 'edjekouane',
@@ -16,11 +20,13 @@ const person = {
 };
 
 // Pour acceder à la une propriété d'un objet
+person.job.name = 'developpeur';
+
 let message = `Bonjour je m'appelle ${person.firstName} j'ai eu ${person.notes[2]} à mon dernier devoir,
 mon plus jeune frère s'appelle ${person.brother.firstName}`;
 console.log(message);
 
-//Ajoute la propriete adress à l'objet OU modifie sa valeur si elle existe déjà
+// Ajoute la propriete adress à l'objet OU modifie sa valeur si elle existe déjà
 person.adress = '2 rue guy de maupassant';
 person.sport = 'climbing';
 
