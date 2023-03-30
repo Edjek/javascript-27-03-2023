@@ -42,12 +42,17 @@ console.log('Hello World!');
 //Inserer du code HTML dans ma page
 document.write('<h1>Un h1 en JS</h1>');
 
-/* --------------------------- 3 - VARIABLES --------------------------- */
+/* --------------------------- VARIABLES --------------------------- */
+
+// ? NB : les noms des variables sont sensibles à la casse
+// on fait la différence entre les majuscules et les minuscules
 
 //  DECLARATION d'une Variable
 let uneVariable;
 
 // Le mot clé const permet de déclarer des constantes
+// Vous ne pouvez pas modifier une constante (on dit qu'elle est immuable)
+// const va garantir que la valeur de la variable troisieme ne soit pas modifié tout au long de l'exécution du script
 const constante = 'Je suis une constante, je ne peux pas être modifié!';
 
 // Le mot clé var permet de déclarer des variables
@@ -382,72 +387,3 @@ console.log(entier); // affiche 42 dans la console
 // Convertir une chaîne de caractères en un nombre décimal.
 const prix = parseFloat('3.99');
 console.log(prix); // affiche 3.99 dans la console
-
-/* --------------------------- 15 - OBJETS --------------------------- */
-
-// Les objets sont des structures de données complexes qui permettent de stocker des valeurs et des fonctions ensemble.
-let personn = {
-    name: 'rachid',
-    setName: function (name) {
-        this.name = name;
-        console.log(this);
-    },
-};
-personn.setName('toto');
-
-console.log(personn.name);
-console.log(personn['name']);
-
-/* --------------------------- 16 - CALLBACKS --------------------------- */
-
-// Les objets sont des structures de données complexes qui permettent de stocker des valeurs et des fonctions ensemble.
-
-function add(a) {
-    return a + 10;
-}
-
-function divide(a) {
-    return a / 2;
-}
-
-function multiply(a) {
-    return a * 2;
-}
-
-function math(number, callback) {
-    let variable = 1;
-    return callback(number, variable);
-}
-
-let calcul = math(12, function (a, b) {
-    console.log(b);
-    return a + b;
-});
-
-console.log(calcul);
-
-/* --------------------------- 17 - FONCTIONS AVANCEES --------------------------- */
-
-const fruity = ['pomme', 'banane', 'orange', 'kiwi'];
-
-// forEach est une méthode JavaScript qui permet d'itérer sur les éléments d'un tableau
-// et d'exécuter une fonction donnée pour chaque élément.
-fruits.forEach(function (fruit) {
-    console.log(fruit);
-});
-
-//  for...of  permet de parcourir les éléments d'un objet itérable (ex: tableau, string)
-for (let fruit of fruity) {
-    console.log(fruit);
-}
-
-const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 30,
-};
-
-// for...in permet de parcourir les propriétés énumérables d'un objet
-for (let key in person) {
-    console.log(key + ': ' + person[key]);
-}

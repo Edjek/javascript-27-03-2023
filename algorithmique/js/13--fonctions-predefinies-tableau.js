@@ -16,7 +16,8 @@ fruits.shift();
 // Renvoie une copie d'une partie du tableau
 // Premier paramètre l'indice de départ
 // Deuxième paramètre l'indice de fin exclu
-console.log(fruits.slice(1, 3));
+let newFruits = fruits.slice(1, 3);
+console.log(newFruits);
 
 // Modifier ou Ajouter  ou Supprimer un element dans le tableau
 // Ajouter
@@ -27,7 +28,19 @@ fruits.splice(2, 1, 'Melon');
 fruits.splice(2, 1);
 
 // Réorganise le tableau de la fin vers le début
-fruits.reverse()
+fruits.reverse();
+
+console.log(fruits);
+
+// Renvoie une copie du tableau sous forme string chainé par le caractère choisi
+console.log(fruits.join(''));
+
+// retourne un tableau
+let id = 'rachid-edjekouane';
+let array = id.split('-');
+console.log(array);
 
 // On peut concaténer deux tableaux (retourne un nouveau tableaux)
-const array = fruits.concat(week);
+let vegetables = ['patate douce', 'carotte', 'celeri'];
+const food = fruits.concat(vegetables);
+console.log(`2 tableaux concaténés : ${food}`);

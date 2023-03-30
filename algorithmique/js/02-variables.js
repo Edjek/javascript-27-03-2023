@@ -7,7 +7,7 @@
 let uneVariable;
 
 // Le mot clé const permet de déclarer des constantes
-// Vous ne pouvez pas modifier une constante
+// Vous ne pouvez pas modifier une constante (on dit qu'elle est immuable)
 // const va garantir que la valeur de la variable troisieme ne soit pas modifié tout au long de l'exécution du script
 const constante = 'Je suis une constante, je ne peux pas être modifié!';
 

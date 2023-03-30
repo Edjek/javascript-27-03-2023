@@ -36,7 +36,7 @@ console.log(boucle);
 // Boucle (For)
 let combien = 9;
 
-for(let i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i++) {
     let res = i * combien;
     console.log(
         `${res} la table de multiplication de ${combien} : ${combien} * ${i} = ${res}`

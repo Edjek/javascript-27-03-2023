@@ -9,11 +9,27 @@ function add(x, y) {
 let resultat = add(7, 3);
 console.log(resultat);
 
-// Une procedure ne retourne rien elle execute des actions
+// Une procedure est une fonction qui ne retourne rien, elle execute des actions
 function helloWorld() {
     console.log('Hello, world!');
 }
 helloWorld();
+
+// Il est possible de sauvegarder une fonction dans une variable
+// On les appelles des fonctions anonymes
+const divide = function (x) {
+    return x / 2;
+};
+divide(2);
+
+// Il existe une nouvelle syntaxe (les fonctions fléchées)
+// Elles permettent d'écrire plus simplement
+const multiply1 = (x) => {
+    return x * x;
+};
+const multiply2 = (x) => x * x;
+const multiply3 = x => x * x;
+console.log(multiply3(12));
 
 /*
 Creer une fonction

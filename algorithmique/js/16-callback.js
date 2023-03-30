@@ -1,27 +1,49 @@
-/* --------------------------- 16 - CALLBACKS --------------------------- */
+/* --------------------------- callback --------------------------- */
 
-// Les objets sont des structures de données complexes qui permettent de stocker des valeurs et des fonctions ensemble.
 
-function add(a) {
-    return a + 10;
+function add(x, y) {
+    return x + y;
 }
 
-function divide(a) {
-    return a / 2;
+function divide(x, y) {
+    return x / y;
 }
 
-function multiply(a) {
-    return a * 2;
+function multiply(x, y) {
+    return x * y;
 }
 
-function math(number, callback) {
-    let variable = 1;
-    return callback(number, variable);
+function mathematique(x, y, callback) {
+   return callback(y, y)
 }
 
-let result = math(12, function (a, b) {
-    console.log(b);
-    return a + b;
-});
+console.log(mathematique(12, 13,add));
+console.log(mathematique(12, 13,multiply));
 
-console.log(result);
+const res = mathematique(12,13, function(a,b){
+    return a*b*(a+b)
+})
+
+console.log(res);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mathematique(12, 13,multiply)

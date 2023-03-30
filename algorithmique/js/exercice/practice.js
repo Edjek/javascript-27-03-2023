@@ -101,3 +101,39 @@ let i = g * h;
         Afficher le tableau dans la console
         Retourner le tableau
 */
+
+let firstName = prompt('Quel est votre prénom ?')
+let lastName  = prompt('Quel est votre nom ?')
+let age       = prompt('Quel est votre age ?')
+
+function getUser(firstName, lastName, age){
+    let infos     = []
+
+    firstName = firstName.toLowerCase()
+
+    infos.push(firstName, lastName.toUpperCase(), age)
+
+     return infos
+
+}
+
+const user = getUser(firstName, lastName, age)
+console.log(user[0]);
+
+/*
+    Modifier la fonction meteo  pour que :
+    => degré s'accorde avec temperature ("s" au pluriel / sans au singulier)
+    => l'article s'accorde avec la saison ("au" printemps)
+*/
+
+/* 
+Creer un objet sangoku
+    nom => san
+    prenom => goku
+    enfant => array (gohan et goten)
+    age => 
+    presention =>() (
+        retourne ' bonjour je m'appelle San Goku et jai x enfant
+    )
+    clg 'bonjour je m'appelle San Goku et jai x enfant'+ 'ils s'appellent ...
+*/

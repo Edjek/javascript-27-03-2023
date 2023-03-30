@@ -252,23 +252,49 @@ function tableau() {
     //Je crée un tableau vide
     let infos = [];
 
-    //Je crée les variables dans lesquelles je stocke les reponses de l'utilisateur
     let prenom = prompt('Quel est votre prenom ?'),
         nom = prompt('Quel est votre nom ?'),
         age = prompt('Quel est age avez-vous ?');
 
-    //J'effectue les modifications
     prenom = prenom.toLowerCase();
     nom = nom.toUpperCase();
 
-    //J'ajoute les variables à mon tableau
     infos.push(prenom);
     infos.push(nom);
     infos.push(age);
 
-    //J'affiche mon tableau dans la console
+    // Il était possible de tout faire en une ligne
+    // infos.push(lastName.toUpperCase(), firstName.toLowerCase(), age);
+
     console.log(infos);
 
-    //J'ecris ma phrase sur la page en appelant chaque information par son index
     return infos;
 }
+
+/*
+    Creer une fonction meteo qui prend en parametre la saison et la temperature
+        degré s'accorde avec temperature ("s" au pluriel / sans au singulier)
+        l'article s'accorde avec la saison ("au" printemps)
+        Affiche Nous sommes en hiver et il fait -1 degré
+*/
+
+function meteo(saison, temperature) {
+    let degre = 'degres',
+        article = 'en';
+
+    if (temperature >= -1 && temperature <= 1) {
+        degre = 'degre';
+    }
+    if (saison === 'printemps') {
+        article = 'au';
+    } else {
+        article = 'en';
+    }
+
+    return document.write(
+        'Nous sommes ${article} ${saison} et il fait ${temperature} ${degre} <br>'
+    );
+}
+
+meteo('hiver', 5); //Nous sommes en hiver et il fait 5 degrés
+meteo('printemps', 0); //Nous sommes au printemps et il fait 0 degrés

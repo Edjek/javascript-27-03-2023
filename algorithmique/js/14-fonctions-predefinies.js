@@ -2,7 +2,7 @@
 
 const message = 'je suis un bout de texte';
 
-console.log(message.length);
+console.log(message.length); // 24
 
 // Transformer du texte en majuscule
 console.log(message.toUpperCase());
