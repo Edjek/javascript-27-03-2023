@@ -49,3 +49,7 @@ const sangoku = {
 
 message = `${sangoku.presentation()} Ils s'appellent ${sangoku.children[0].toUpperCase()} et ${sangoku.children[1].toUpperCase()}`;
 console.log(message);
+
+for (let key in sangoku) {
+    console.log(`${key} : ${sangoku[key]}`);
+}
