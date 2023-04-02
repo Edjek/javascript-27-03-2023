@@ -1,4 +1,4 @@
-/* --------------------------- 18 - Manipulation du DOM --------------------------- */
+/* --------------------------- Manipulation du DOM --------------------------- */
 
 /*  -------------------------------------------
     Methodes de selecteurs JavaScript
@@ -48,13 +48,13 @@ for (let i = 0; i < elementWithQuerySelectorAll.length; i++) {
 }
 
 // Boucle forEach()
-elementWithQuerySelectorAll.forEach(
-    (toto) => (toto.style.fontWeight = 'bold')
-);
+elementWithQuerySelectorAll.forEach((toto) => (toto.style.fontWeight = 'bold'));
 
 /*  ---------------------------------------------
     Quelques proprietes liées aux éléments du DOM
     ---------------------------------------------
+    En JavaScript, il existe plusieurs propriétés pour accéder et modifier les éléments HTML sélectionnés dans le DOM. 
+    Voici quelques-unes des propriétés les plus couramment utilisées :
 */
 
 const subTitle = document.querySelector('#subtitle');

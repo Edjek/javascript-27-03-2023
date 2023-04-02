@@ -1,15 +1,16 @@
 /*
-    --1-- COMMENTAIRES
-    --2-- AFFICHAGE
-    --3-- VARIABLES
-    --4-- CONCATENATION
-    --5-- TYPES DE DONNEES
-    --6-- OPERATEURS ARITHMETIQUES
-    --7-- CONDITIONS
-    --8-- OPERATEURS
-    --9-- SWITCH
-    --10-- BOUCLES
-    --11-- FONCTIONS
+    --00-- COMMENTAIRES
+    --01-- AFFICHAGE
+    --02-- VARIABLES
+    --03-- CONCATENATION
+    --04-- TYPES DE DONNEES
+    --05-- OPERATEURS ARITHMETIQUES
+    --06-- CONDITIONS
+    --07-- OPERATEURS
+    --08-- SWITCH
+    --09-- BOUCLES
+    --10-- FONCTIONS
+    --10-- PORTEE DES VARIABLES
     --12-- TABLEAUX
     --13-- FONCTIONS PREDEFINIES POUR LES TABLEAUX
     --14-- FONCTIONS PREDEFINIES
@@ -17,9 +18,10 @@
     --16-- CALLBACK
     --17-- FONCTIONS AVANCEES
     --18-- MANIPULATION DU DOM
+    --19-- WINDOW
 */
 
-/* --------------------------- 1 - COMMENTAIRES --------------------------- */
+/* --------------------------- 00 - COMMENTAIRES --------------------------- */
 
 // Un commentaire sur une ligne en Javascript
 /* 
@@ -27,13 +29,14 @@
     en Javascript 
 */
 
-/* --------------------------- 2 - AFFICHAGE --------------------------- */
+/* --------------------------- 01 - AFFICHAGE --------------------------- */
 
 // Afficher des informations dans la console de debbugage du navigateur
 console.log('Hello World!');
 
 // Afficher une boite de dialogue avec un champs à remplir
 // prompt('Quel age avez-vous ?');
+
 // On peut récupérer ce qui est tapé en affectant prompt() à une variable.
 // let message = prompt('Que voulez me dire ?')
 
@@ -43,7 +46,7 @@ console.log('Hello World!');
 // Inserer du code HTML dans ma page
 document.write('<h1>Un h1 en JS</h1>');
 
-/* --------------------------- VARIABLES --------------------------- */
+/* --------------------------- 02 - VARIABLES --------------------------- */
 
 // ? NB : les noms des variables sont sensibles à la casse
 // on fait la différence entre les majuscules et les minuscules
@@ -76,7 +79,7 @@ helloWorld = 'Coucou';
 // Affectation d'une variable dans une autre variable
 let affectation = helloWorld;
 
-/* --------------------------- 4 - CONCATENATION --------------------------- */
+/* --------------------------- 03 - CONCATENATION --------------------------- */
 
 // Concaténation (Afficher du texte et des variables)
 let age = 18;
@@ -90,7 +93,7 @@ console.log("Bonjour, je m'appelle " + firstName + ' ' + lastName);
 console.log("Bonjour, je m'appelle " + firstName + ' ' + lastName);
 console.log(`Bonjour, je m'appelle ${firstName} ${lastName}`);
 
-/* --------------------------- 5 - TYPES DE DONNEES PRIMITIFS --------------------------- */
+/* --------------------------- 04 - TYPES DE DONNEES PRIMITIFS --------------------------- */
 
 // String (Chaine de cactères)
 let string2 = 'Je suis du texte';
@@ -118,7 +121,7 @@ console.log(typeof booleen2);
 console.log(typeof nul);
 console.log(typeof test);
 
-/* --------------------------- 6 - OPERATEURS ARITHMETIQUE --------------------------- */
+/* --------------------------- 05 - OPERATEURS ARITHMETIQUE --------------------------- */
 
 // +, -, /, *, %, **
 
@@ -138,21 +141,30 @@ operation = 10 % 3; //Modulo (=reste division)
 //10 billes à répartir entre 3 personnes => Reste 1
 console.log(`le resultat est ${operation}`); //1
 
+operation = 10 ** 3; //Puissance
+console.log(`le resultat est ${operation}`); //100
+
 let number = prompt('Donnez-moi un nombre ?');
 let number2 = prompt('Donnez-moi un deuxieme nombre ?');
 let result = number * number2;
 console.log(`le resultat de la multiplication est ${result}`);
 
-/* --------------------------- 7 - INSTRUCTION CONDITIONNELLES --------------------------- */
+/* --------------------------- 06 - INSTRUCTION CONDITIONNELLES --------------------------- */
 
-// Les opérateurs de comparaison (==, !=, >, >=, <, <=)
+// Les opérateurs de comparaison (==, ===, !==, !=, >, >=, <, <=)
 
 let condition = 17;
+
+// Si la condition est vraie, le bloc d'instructions est exécuté
+// Sinon il est ignoré
 
 // Si (if)
 if (condition == 18) {
     console.log('tout est ok');
 }
+
+// Si la condition est vraie, le premier bloc d'instructions est exécuté
+// Sinon c'est le 2ième bloc qui est exécuté
 
 // Si, Sinon (if, else)
 if (condition == 17) {
@@ -172,9 +184,26 @@ if (condition == 17) {
     console.log('Houston, nous avons un problème');
 }
 
-/* --------------------------- 8 - OPERATEURS --------------------------- */
+/* --------------------------- 07 - OPERATEURS DE COMPARAISON --------------------------- */
 
 // Les opérateurs de comparaison (==, ===, !=, !==, >, >=, <, <=)
+// === verifie à la fois la valeur et le type des valeurs comparées (opérandes)
+// == verifie uniquement la valeur des valeurs comparées (opérandes)
+
+/*
+    let variable = 3
+
+    Egal(==) renvoie TRUE si les opérandes (les variables que l'on comparent) sont EGALES
+        variable == 3 // true
+        variable == '3' // true
+
+    Strictement égal (===) renvoie TRUE si les opérandes sont EGALES et de MEME TYPE
+        variable == 3 //true
+        variable == '3' //false
+
+    Le type booléen correspond à la valeur renvoyée lorsque l'on effectue un test sur des variables
+*/
+
 if (condition >= 18) {
     console.log('Tu es majeur, bravo');
 } else {
@@ -189,12 +218,12 @@ if (condition >= 18 || (permis == true && test === 'toto')) {
     console.log('Houston, nous avons 2 problèmes');
 }
 
-/* --------------------------- 9 - CONDITION SWITCH --------------------------- */
+/* --------------------------- 08 - CONDITION SWITCH --------------------------- */
 
 /*
-    L'instruction switch évalue une expression et 
-    selon le résultat obtenu et le cas associé, 
-    exécute les instructions correspondantes.
+    L'instruction switch permet de réaliser des instructions 
+    en fonction des differentes valeurs prises par une variable
+    L’instruction switch représente une alternative à l’utilisation d’un if…else if…else
  */
 
 let expr = 'banane';
@@ -218,7 +247,7 @@ switch (expr) {
         break;
 }
 
-/* --------------------------- 10 - BOUCLES --------------------------- */
+/* --------------------------- 09 - BOUCLES --------------------------- */
 
 //Les boucles sont des structures permettant d'executer plusieurs fois  des instructions.
 
@@ -256,12 +285,14 @@ do {
     console.log(boucle);
 } while (boucle <= 10);
 
-/* --------------------------- 11 - FONCTIONS --------------------------- */
+/* --------------------------- 10 - FONCTIONS --------------------------- */
 
-// Une fonction en JavaScript est un bloc de code réutilisable
-// qui peut être appelé à partir d'autres parties de votre code pour effectuer une tâche spécifique.
-// Les fonctions sont un moyen utile de segmenter votre code en tâches plus petites et plus faciles à gérer,
-// et elles vous permettent également de réutiliser le même code plusieurs fois sans avoir à le copier et le coller.
+/*
+    Une fonction en JavaScript est un bloc de code réutilisable
+    qui peut être appelé à partir d'autres parties de votre code pour effectuer une tâche spécifique.
+    Les fonctions sont un moyen utile de segmenter votre code en tâches plus petites et plus faciles à gérer,
+    et elles vous permettent également de réutiliser le même code plusieurs fois sans avoir à le copier et le coller.
+*/
 
 // Déclaration de fonction
 function afficherMessage() {
@@ -271,7 +302,7 @@ function afficherMessage() {
 // Une fonction n'est executée que lorsqu'elle est appelée
 afficherMessage();
 
-// Déclaration de fonction avec 2 parametres
+// Déclaration d'une fonction avec 2 parametres
 function add(x, y) {
     return x + y;
 }
@@ -279,7 +310,8 @@ function add(x, y) {
 let resultat = add(7, 3);
 console.log(resultat);
 
-// Il est également possible de stocker une fonction dans une variable et de l'appeler en utilisant cette variable
+// Il est également possible de stocker une fonction dans une variable
+// et de l'appeler en utilisant cette variable
 let multiplier = function (a, b) {
     return a * b;
 };
@@ -287,7 +319,16 @@ let multiplier = function (a, b) {
 let res = multiplier(2, 3);
 console.log(res);
 
-/* --------------------------- 12 - PORTEE DES VARIABLES --------------------------- */
+// Il existe une nouvelle syntaxe (les fonctions fléchées)
+// Elles permettent d'écrire plus simplement des fonctions anonymes
+const multiply1 = (x) => {
+    return x * x;
+};
+const multiply2 = (x) => x * x;
+const multiply3 = (x) => x * x;
+console.log(multiply3(12));
+
+/* --------------------------- 11 - PORTEE DES VARIABLES --------------------------- */
 
 // La portée (scope) d'un objet est la portion de code dans laquelle une variable est accessible.
 
@@ -323,10 +364,13 @@ if (true) {
 // console.log(x);
 // génère une erreur : x n'est pas défini dans le scope global
 
-/* --------------------------- 13 - TABLEAUX --------------------------- */
+/* --------------------------- 12 - TABLEAUX --------------------------- */
 
-// Un tableau (array) est un type de donnée qui peut contenir plusieurs éléments
-// On peut créer un tableau en utilisant des crochets [] et en y insérant les éléments séparés par des virgules.
+/*
+    Un tableau (array) est un type de donnée qui peut contenir plusieurs éléments
+    On peut créer un tableau en utilisant des crochets [] et en y insérant les éléments séparés par des virgules.
+*/
+
 let week = [
     'lundi',
     'mardi',
@@ -350,12 +394,12 @@ console.log(week);
 // Pour connaitre la longueur d'un tableau nous pouvons utiliser la propriété .length
 console.log(week.length);
 
-// declarer un tableau de fruits banane, pomme, fraise, kiwi
-let fruits = ['banane', 'fraise', 'pomme', 'kiwi'];
+// Déclarer un tableau de fruits banane, pomme, fraise, kiwi
+let fruitsExotiques = ['Apple', 'Banana', 'Mango'];
 
-// Pour itérer sur les valeurs d'un tableau nous pouvons utiliser la boucle for
-for (let i = 0; i < fruits.length; i++) {
-    console.log(fruits[i]);
+// Pour itérer sur les valeurs d'un tableau nous pouvons utiliser la boucle `for()`
+for (let i = 0; i < fruitsExotiques.length; i++) {
+    console.log(fruitsExotiques[i]);
 }
 
 // Rendre parametrable une fonction acceptant un tableau en parametre et affichant chaque case du tableau
@@ -364,7 +408,7 @@ function displayArray(array) {
         console.log(array[i]);
     }
 }
-displayArray(fruits);
+displayArray(fruitsExotiques);
 
 // Les tableaux peuvent contenir des tableaux
 // Ils peuvent être multidimensionnels
@@ -375,6 +419,57 @@ let notes = [
 ];
 // Pour acceder à un valeur bien penser à cibler l'index dans l'index
 console.log(notes[0][1]);
+
+/* --------------------------- 13 - FONCTIONS PREDEFINIES - TABLEAUX --------------------------- */
+
+// ! Attention la plupart des methodes modifient le tableau de départ
+
+let fruits = ['banane', 'fraise', 'pomme', 'kiwi'];
+
+// Ajouter un ou plusieurs éléments à la fin du tableau
+// renvoie la nouvelle longueur du tableau
+fruits.push('orange', 'cerise');
+// Supprimer le dernier élément du tableau
+// renvoie l'élément supprimé.
+fruits.pop();
+
+// Ajouter un ou plusieurs éléments au début du tableau
+// renvoie la nouvelle longueur du tableau
+fruits.unshift('abricot');
+// Supprimer le premier élément du tableau
+// renvoie l'élément supprimé
+fruits.shift();
+
+// Renvoie une copie d'une partie du tableau
+// ne modifie pas le tableau original
+let newFruits = fruits.slice(1, 3);
+console.log(newFruits);
+
+// Modifier ou Ajouter  ou Supprimer un element dans le tableau
+// renvoie les éléments supprimés
+// Ajouter
+fruits.splice(1, 0, 'Mangue');
+//Modifier
+fruits.splice(2, 1, 'Melon');
+// Supprimer
+fruits.splice(2, 1);
+
+// Réorganise le tableau de la fin vers le début
+fruits.reverse();
+console.log(fruits);
+
+// Renvoie une copie du tableau sous forme string chainé par le caractère choisi
+console.log(fruits.join(''));
+
+// divise une chaîne de caractères dans un tableau et retourne le tableau.
+let id = 'rachid-edjekouane';
+let array = id.split('-');
+console.log(array);
+
+// On peut concaténer deux tableaux (retourne un nouveau tableaux)
+let vegetables = ['patate douce', 'carotte', 'celeri'];
+const food = fruits.concat(vegetables);
+console.log(`2 tableaux concaténés : ${food}`);
 
 /* --------------------------- 14 - FONCTIONS PREDEFINIES --------------------------- */
 
@@ -401,7 +496,10 @@ console.log(prix); // affiche 3.99 dans la console
 
 /* --------------------------- 15 - Objets --------------------------- */
 
-// Les objets sont des structures de données complexes qui permettent de stocker des valeurs et des fonctions ensemble.
+/*
+    Les objets sont des structures de données complexes 
+    qui permettent de stocker des valeurs et des fonctions ensemble.
+*/
 
 const person = {
     firstName: 'rachid',
@@ -458,7 +556,7 @@ for (let key in sangoku) {
 /* --------------------------- 16 - CALLBACK --------------------------- */
 
 /*
-    Un callback (fonction de rappel ) est une fonction qui est passée en tant qu'argument à une autre fonction.
+    Un callback (fonction de rappel) est une fonction qui est passée en tant qu'argument à une autre fonction.
 */
 
 function mathematique(x, y, callback) {
@@ -480,20 +578,19 @@ function multiply(x, y) {
 console.log(mathematique(12, 13, add));
 console.log(mathematique(12, 13, multiply));
 
-// Nous pouvons donc passer en argument une fonction anonyme
+// Nous pouvons donc passer directement en argument une fonction anonyme
 const calcul = mathematique(12, 13, function (a, b) {
     return a * b * (a + b);
 });
 
 console.log(calcul);
 
-mathematique(12, 13, multiply);
-
 /* --------------------------- 17 - FONCTIONS AVANCEES --------------------------- */
 
 /*
-    Pour les tableaux
+    Array
 */
+
 const animals = ['tigre', 'loup', 'chouette', 'ours'];
 
 for (let i = 0; i < animals.length; i++) {
@@ -510,8 +607,9 @@ for (let animal of animals) {
 }
 
 /*
-    Pour les objets
+    Objects
 */
+
 const user = {
     firstName: 'John',
     lastName: 'Doe',
@@ -522,6 +620,22 @@ const user = {
 for (let key in user) {
     console.log(`${key} : ${user[key]}`);
 }
+
+/*
+    Reconstruire une fonction `forEach()`
+*/
+
+let pets = ['chien', 'chat', 'poisson', 'oiseau'];
+
+function forEach(array, callback) {
+    for (let i = 0; i < array.length; i++) {
+        callback(array[i]);
+    }
+}
+
+forEach(pets, function (animal) {
+    console.log(animal);
+});
 
 /* --------------------------- 18 - Manipulation du DOM --------------------------- */
 
@@ -578,6 +692,8 @@ elementWithQuerySelectorAll.forEach((toto) => (toto.style.fontWeight = 'bold'));
 /*  ---------------------------------------------
     Quelques proprietes liées aux éléments du DOM
     ---------------------------------------------
+    En JavaScript, il existe plusieurs propriétés pour accéder et modifier les éléments HTML sélectionnés dans le DOM. 
+    Voici quelques-unes des propriétés les plus couramment utilisées :
 */
 
 const subTitle = document.querySelector('#subtitle');

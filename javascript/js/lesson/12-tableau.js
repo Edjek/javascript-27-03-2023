@@ -1,7 +1,10 @@
 /* --------------------------- TABLEAUX --------------------------- */
 
-// Un tableau (array) est un type de donnée qui peut contenir plusieurs éléments
-// On peut créer un tableau en utilisant des crochets [] et en y insérant les éléments séparés par des virgules.
+/*
+    Un tableau (array) est un type de donnée qui peut contenir plusieurs éléments
+    On peut créer un tableau en utilisant des crochets [] et en y insérant les éléments séparés par des virgules.
+*/
+
 let week = [
     'lundi',
     'mardi',
@@ -25,7 +28,7 @@ console.log(week);
 // Pour connaitre la longueur d'un tableau nous pouvons utiliser la propriété .length
 console.log(week.length);
 
-// declarer un tableau de fruits banane, pomme, fraise, kiwi
+// Déclarer un tableau de fruits banane, pomme, fraise, kiwi
 let fruits = ['banane', 'fraise', 'pomme', 'kiwi'];
 
 // Pour itérer sur les valeurs d'un tableau nous pouvons utiliser la boucle for

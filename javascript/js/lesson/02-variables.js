@@ -3,7 +3,7 @@
 // ? NB : les noms des variables sont sensibles à la casse
 // on fait la différence entre les majuscules et les minuscules
 
-//  DECLARATION d'une Variable
+// DECLARATION d'une Variable
 let uneVariable;
 
 // Le mot clé const permet de déclarer des constantes
