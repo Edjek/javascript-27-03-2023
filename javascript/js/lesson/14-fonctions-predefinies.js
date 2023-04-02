@@ -2,7 +2,7 @@
 
 const message = 'je suis un bout de texte';
 
-console.log(message.length); // 24
+console.log(message.length);
 
 // Transformer du texte en majuscule
 console.log(message.toUpperCase());
@@ -14,8 +14,8 @@ const messageUppercase = message.toUpperCase();
 console.log(messageUppercase.toLowerCase());
 
 // Convertir une chaîne de caractères en un nombre entier.
-const age = parseInt('42', 10);
-console.log(age); // affiche 42 dans la console
+const entier = parseInt('42', 10);
+console.log(entier); // affiche 42 dans la console
 
 // Convertir une chaîne de caractères en un nombre décimal.
 const prix = parseFloat('3.99');

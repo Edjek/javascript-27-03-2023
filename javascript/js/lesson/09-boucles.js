@@ -33,7 +33,7 @@ console.log(boucle);
 boucle++;
 console.log(boucle);
 
-// Boucle (For)
+// Boucle for(){...} (pour
 let combien = 9;
 
 for (let i = 0; i < 10; i++) {

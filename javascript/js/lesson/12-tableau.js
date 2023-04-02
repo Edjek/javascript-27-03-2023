@@ -1,7 +1,10 @@
 /* --------------------------- TABLEAUX --------------------------- */
 
-// Un tableau (array) est un type de donnée qui peut contenir plusieurs éléments
-// On peut créer un tableau en utilisant des crochets [] et en y insérant les éléments séparés par des virgules.
+/*
+    Un tableau (array) est un type de donnée qui peut contenir plusieurs éléments
+    On peut créer un tableau en utilisant des crochets [] et en y insérant les éléments séparés par des virgules.
+*/
+
 let week = [
     'lundi',
     'mardi',

@@ -5,12 +5,12 @@
     -------------------------------------------
 */
 
-// ? La methode getElementById()
+//  ? La methode `getElementById()`
 const elementById = document.getElementById('element-by-id');
 elementById.style.color = 'red';
 
 /*
-    ? La methode getElementsByTagName()
+    ? La methode `getElementsByTagName()`
     getElementsByClassName renvoi une HTMLCollection 
     sur laquelle on pourra itérer avec la boucle for()
 */
@@ -20,7 +20,7 @@ for (let i = 0; i < elementByTagName.length; i++) {
 }
 
 /*
-    ? La methode getElementsByClassName()
+    ? La methode `getElementsByClassName()`
     getElementsByClassName renvoi une HTMLCollection
     sur laquelle on pourra itérer avec la boucle for()
 */
@@ -30,27 +30,25 @@ for (let i = 0; i < elementByClassName.length; i++) {
     elementByClassName[i].style.color = 'orange';
 }
 
-// ? La methode querySelector
+//  ? La methode `querySelector`
 const element = document.querySelector('p');
 element.style.color = 'green';
 
 /*
-    ? La methode querySelectorAll
+    ? La methode `querySelectorAll`
     querySelectorAll renvoi une NodeList
-    sur laquelle on pourra itérer avec la boucle for() ou la méthode forEach()
+    sur laquelle on pourra itérer avec la boucle `for()` ou la méthode `forEach()`
 */
 const elementWithQuerySelectorAll =
     document.querySelectorAll('.element-by-class');
 
-// Boucle for()
+// Boucle `for()`
 for (let i = 0; i < elementWithQuerySelectorAll.length; i++) {
     elementWithQuerySelectorAll[i].style.color = 'khaki';
 }
 
-// Boucle forEach()
-elementWithQuerySelectorAll.forEach(
-    (toto) => (toto.style.fontWeight = 'bold')
-);
+// Boucle `forEach()`
+elementWithQuerySelectorAll.forEach((toto) => (toto.style.fontWeight = 'bold'));
 
 /*  ---------------------------------------------
     Quelques proprietes liées aux éléments du DOM

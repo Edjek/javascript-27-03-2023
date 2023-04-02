@@ -1,18 +1,18 @@
 /* --------------------------- VARIABLES --------------------------- */
 
 // ? NB : les noms des variables sont sensibles à la casse
-// on fait la différence entre les majuscules et les minuscules
+// On fait la différence entre les majuscules et les minuscules
 
-//  DECLARATION d'une Variable
+// DECLARATION d'une Variable
 let uneVariable;
 
 // Le mot clé const permet de déclarer des constantes
 // Vous ne pouvez pas modifier une constante (on dit qu'elle est immuable)
-// const va garantir que la valeur de la variable troisieme ne soit pas modifié tout au long de l'exécution du script
+// `const` va garantir que la valeur de la variable troisieme ne soit pas modifié tout au long de l'exécution du script
 const constante = 'Je suis une constante, je ne peux pas être modifié!';
 
 // Le mot clé var permet de déclarer des variables
-// c'est une pratique désuète (c'était la seule façon avant 2015)
+// C'est une pratique désuète (c'était la seule façon avant 2015)
 var past = 'je suis dépassé';
 
 // AFFECTATION d'une variable (donne une valeur à une variable)

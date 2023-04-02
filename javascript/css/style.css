@@ -17,6 +17,7 @@ h1 {
 
 .container {
     width: 80%;
+    max-width: 800px;
     margin: auto;
 }
 

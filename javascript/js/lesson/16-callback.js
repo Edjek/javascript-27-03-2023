@@ -1,6 +1,6 @@
 /* --------------------------- CALLBACK --------------------------- */
 
-// Un  callback (fonction de rappel ) est une fonction qui est passée en tant qu'argument à une autre fonction.
+// Un  callback (fonction de rappel) est une fonction qui est passée en tant qu'argument à une autre fonction.
 function mathematique(x, y, callback) {
     return callback(x, y);
 }
