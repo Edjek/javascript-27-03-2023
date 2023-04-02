@@ -18,6 +18,7 @@
     --16-- CALLBACK
     --17-- FONCTIONS AVANCEES
     --18-- MANIPULATION DU DOM
+    --19-- WINDOW
 */
 
 /* --------------------------- 00 - COMMENTAIRES --------------------------- */
