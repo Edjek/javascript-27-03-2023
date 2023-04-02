@@ -39,11 +39,11 @@ console.log(fruits);
 console.log(fruits.join(''));
 
 // divise une chaîne de caractères dans un tableau et retourne le tableau.
-let id = 'rachid-edjekouane';
+let id    = 'rachid-edjekouane';
 let array = id.split('-');
 console.log(array);
 
 // On peut concaténer deux tableaux (retourne un nouveau tableaux)
-let vegetables = ['patate douce', 'carotte', 'celeri'];
-const food = fruits.concat(vegetables);
+let   vegetables = ['patate douce', 'carotte', 'celeri'];
+const food       = fruits.concat(vegetables);
 console.log(`2 tableaux concaténés : ${food}`);

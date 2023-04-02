@@ -23,8 +23,8 @@ for (let animal of animals) {
 */
 const person = {
     firstName: 'John',
-    lastName: 'Doe',
-    age: 30,
+    lastName : 'Doe',
+    age      : 30,
 };
 
 // for(...in...) permet de parcourir les propriétés énumérables d'un objet

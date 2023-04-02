@@ -3,9 +3,9 @@
 // Les objets sont des structures de données complexes qui permettent de stocker des valeurs et des fonctions ensemble.
 
 const person = {
-    firstName: 'rachid',
-    lastName: 'edjekouane',
-    notes: [10, 12, 19, 20],
+    firstName   : 'rachid',
+    lastName    : 'edjekouane',
+    notes       : [10, 12, 19, 20],
     getFirstName: function () {
         return this.firstName;
     },
@@ -15,7 +15,7 @@ const person = {
     },
     brother: {
         firstName: 'malik',
-        lastName: 'edjekouane',
+        lastName : 'edjekouane',
     },
 };
 
@@ -38,10 +38,10 @@ let key = 'firstName';
 console.log(person[key]);
 
 const sangoku = {
-    firstName: 'san',
-    lastName: 'goku',
-    children: ['gohan', 'goten'],
-    age: 39,
+    firstName   : 'san',
+    lastName    : 'goku',
+    children    : ['gohan', 'goten'],
+    age         : 39,
     presentation: function () {
         return `Bonjour je m'appelle ${this.firstName} ${this.lastName} et jai ${this.children.length} enfants `;
     },

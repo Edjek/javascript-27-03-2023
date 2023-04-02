@@ -27,12 +27,6 @@ do {
     console.log(boucle);
 } while (boucle <= 10);
 
-boucle++;
-console.log(boucle);
-
-boucle++;
-console.log(boucle);
-
 // Boucle for(){...} (pour
 let combien = 9;
 
