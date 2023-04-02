@@ -2,8 +2,6 @@
 
 // Les opérateurs de comparaison (==, ===, !=, !==, >, >=, <, <=)
 // === verifie à la fois la valeur et le type des valeurs comparées (opérandes)
-// == verifie uniquement la valeur des valeurs comparées (opérandes)
-
 /*
     let variable = 3
 
@@ -17,7 +15,6 @@
 
     Le type booléen correspond à la valeur renvoyée lorsque l'on effectue un test sur des variables
 */
-
 if (condition >= 18) {
     console.log('Tu es majeur, bravo');
 } else {

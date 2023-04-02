@@ -1,19 +1,18 @@
 /* --------------------------- INSTRUCTION CONDITIONNELLES --------------------------- */
 
-// Les opérateurs de comparaison (==, ===, !==, !=, >, >=, <, <=)
+// Les opérateurs de comparaison (==, !=, >, >=, <, <=)
 
 let condition = 17;
 
 // Si la condition est vraie, le bloc d'instructions est exécuté
-// Sinon il est ignoré
-
+// sinon il est ignoré
 // Si (if)
 if (condition == 18) {
     console.log('tout est ok');
 }
 
 // Si la condition est vraie, le premier bloc d'instructions est exécuté
-// Sinon c'est le 2ième bloc qui est exécuté
+// sinon c'est le 2ième bloc qui est exécuté
 // Si, Sinon (if, else)
 if (condition == 17) {
     console.log('tout est ok');

@@ -1,12 +1,5 @@
 /* --------------------------- FONCTIONS --------------------------- */
 
-/*
-    Une fonction en JavaScript est un bloc de code réutilisable
-    qui peut être appelé à partir d'autres parties de votre code pour effectuer une tâche spécifique.
-    Les fonctions sont un moyen utile de segmenter votre code en tâches plus petites et plus faciles à gérer,
-    et elles vous permettent également de réutiliser le même code plusieurs fois sans avoir à le copier et le coller.
-*/
-
 // Déclaration de fonction
 function add(x, y) {
     return x + y;
@@ -23,14 +16,14 @@ function helloWorld() {
 helloWorld();
 
 // Il est possible de sauvegarder une fonction dans une variable
-// On appelle une fonction qui n'a pas de nom, une fonction anonyme
+// On les appelles des fonctions anonymes
 const divide = function (x) {
     return x / 2;
 };
 divide(2);
 
 // Il existe une nouvelle syntaxe (les fonctions fléchées)
-// Elles permettent d'écrire plus simplement des fonctions anonymes
+// Elles permettent d'écrire plus simplement
 const multiply1 = (x) => {
     return x * x;
 };

@@ -1,9 +1,6 @@
 /* --------------------------- Objets --------------------------- */
 
-/*
-    Les objets sont des structures de données complexes 
-    qui permettent de stocker des valeurs et des fonctions ensemble.
-*/
+// Les objets sont des structures de données complexes qui permettent de stocker des valeurs et des fonctions ensemble.
 
 const person = {
     firstName: 'rachid',

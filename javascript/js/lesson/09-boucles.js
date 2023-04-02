@@ -8,16 +8,6 @@
     "while" est utilisé lorsque le nombre d'itérations est inconnu à l'avance et dépend d'une condition spécifique.
 */
 
-// Boucle (For)
-let combien = 9;
-
-for (let i = 0; i < 10; i++) {
-    let res = i * combien;
-    console.log(
-        `${res} la table de multiplication de ${combien} : ${combien} * ${i} = ${res}`
-    );
-}
-
 // BOUCLE while(){...} (tant que)
 let boucle = 5;
 
@@ -31,7 +21,26 @@ while (boucle <= 10) {
 }
 
 // BOUCLE do{...}while() execute toujours une fois l'instruction avant de vérifier la condition
+
 do {
     boucle++;
     console.log(boucle);
 } while (boucle <= 10);
+
+boucle++;
+console.log(boucle);
+
+boucle++;
+console.log(boucle);
+
+// Boucle (For)
+let combien = 9;
+
+for (let i = 0; i < 10; i++) {
+    let res = i * combien;
+    console.log(
+        `${res} la table de multiplication de ${combien} : ${combien} * ${i} = ${res}`
+    );
+}
+
+console.log(res);

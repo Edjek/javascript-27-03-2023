@@ -1,5 +1,4 @@
 /* --------------------------- FONCTIONS PREDEFINIES - TABLEAUX --------------------------- */
-
 // ! Attention la plupart des methodes modifient le tableau de départ
 
 let fruits = ['banane', 'fraise', 'pomme', 'kiwi'];

@@ -7,10 +7,10 @@ console.log('Hello World!');
 // prompt('Quel age avez-vous ?');
 
 // On peut récupérer ce qui est tapé en affectant prompt() à une variable.
-// let message = prompt('Que voulez me dire ?')
+// let message = prompt('Que voulezme dire ?')
 
-// Afficher des informations dans un pop-up
+//Afficher des informations dans un pop-up (ok)
 // alert('Hello, World!')
 
-// Inserer du code HTML dans ma page
+//Inserer du code HTML dans ma page
 document.write('<h1>Un h1 en JS</h1>');
