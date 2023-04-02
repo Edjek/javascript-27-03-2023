@@ -350,14 +350,3 @@ const students = [
 // Si la moyenne est inférieure à 9
 // Afficher dans la console 'vous redoublez'
 
-students.forEach(function (student) {
-    let moyenne = 0
-    for (let i = 0; i < student.notes.length; i++) {
-        moyenne += student.notes[i]
-    }
-    moyenne = parseInt(moyenne / student.notes.length)
-
-    if (student.prenom == 'Marc') {
-        console.log(student.nom, moyenne)
-    }
-})
