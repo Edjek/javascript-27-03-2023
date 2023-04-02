@@ -6,8 +6,7 @@
 
 body {
     color: #333;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-        sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 h1 {
@@ -28,15 +27,15 @@ p {
 }
 
 .subtitle {
-    background-color: rgb(93, 148, 231);
-    font-size: 35px;
     padding: 30px;
-    transition: 0.5s;
+    background-color: rgb(93, 148, 231);
+    font-size: 30px;
+    transition: 0.7s;
 }
 
 .subtitle.active {
+    padding: 50px;
+    background-color: rgb(219, 45, 74);
+    font-size: 40px;
     font-style: italic;
-    background-color: green;
-    padding: 20px;
-    font-size: 30px;
 }

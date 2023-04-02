@@ -248,28 +248,23 @@ modifyCities();
         Afficher le tableau dans la console
         Retourner le tableau
 */
-function tableau() {
-    //Je crée un tableau vide
+
+let firstName = prompt('Quel est votre prénom ?');
+let lastName = prompt('Quel est votre nom ?');
+let ageUser = prompt('Quel est votre age ?');
+
+function getUser(firstName, lastName, age) {
     let infos = [];
 
-    let prenom = prompt('Quel est votre prenom ?'),
-        nom = prompt('Quel est votre nom ?'),
-        age = prompt('Quel est age avez-vous ?');
+    firstName = firstName.toLowerCase();
 
-    prenom = prenom.toLowerCase();
-    nom = nom.toUpperCase();
-
-    infos.push(prenom);
-    infos.push(nom);
-    infos.push(age);
-
-    // Il était possible de tout faire en une ligne
-    // infos.push(lastName.toUpperCase(), firstName.toLowerCase(), age);
-
-    console.log(infos);
+    infos.push(firstName, lastName.toUpperCase(), age);
 
     return infos;
 }
+
+const user = getUser(firstName, lastName, ageuser);
+console.log(user[0]);
 
 /*
     Creer une fonction meteo qui prend en parametre la saison et la temperature

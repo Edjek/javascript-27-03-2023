@@ -29,8 +29,8 @@ console.log(week.length);
 let fruits = ['banane', 'fraise', 'pomme', 'kiwi'];
 
 // Pour itérer sur les valeurs d'un tableau nous pouvons utiliser la boucle for
-for (let i = 0; i < array.length; i++) {
-    console.log(array[i]);
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
 }
 
 // Rendre parametrable une fonction acceptant un tableau en parametre et affichant chaque case du tableau

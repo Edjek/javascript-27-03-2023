@@ -16,6 +16,7 @@
     --15-- OBJETS
     --16-- CALLBACK
     --17-- FONCTIONS AVANCEES
+    --18-- MANIPULATION DU DOM
 */
 
 /* --------------------------- 1 - COMMENTAIRES --------------------------- */
@@ -34,12 +35,12 @@ console.log('Hello World!');
 // Afficher une boite de dialogue avec un champs à remplir
 // prompt('Quel age avez-vous ?');
 // On peut récupérer ce qui est tapé en affectant prompt() à une variable.
-// let message = prompt('Que voulezme dire ?')
+// let message = prompt('Que voulez me dire ?')
 
-//Afficher des informations dans un pop-up (ok)
+// Afficher des informations dans un pop-up
 // alert('Hello, World!')
 
-//Inserer du code HTML dans ma page
+// Inserer du code HTML dans ma page
 document.write('<h1>Un h1 en JS</h1>');
 
 /* --------------------------- VARIABLES --------------------------- */
@@ -47,7 +48,7 @@ document.write('<h1>Un h1 en JS</h1>');
 // ? NB : les noms des variables sont sensibles à la casse
 // on fait la différence entre les majuscules et les minuscules
 
-//  DECLARATION d'une Variable
+// DECLARATION d'une Variable
 let uneVariable;
 
 // Le mot clé const permet de déclarer des constantes
@@ -91,15 +92,15 @@ console.log(`Bonjour, je m'appelle ${firstName} ${lastName}`);
 
 /* --------------------------- 5 - TYPES DE DONNEES PRIMITIFS --------------------------- */
 
-// Chaine de cactères (String)
+// String (Chaine de cactères)
 let string2 = 'Je suis du texte';
 
-//Tous les types d'ecritures numériques sont possibles (positif, negatif,decimal)
+// Number (Tous les types d'ecritures numériques sont possibles : positif, negatif, decimal)
 let nombre = 18; //number
 let decimal = 20.3; //number
-let negatif = -10;
+let negatif = -10; //number
 
-// Booléens (Boolean)
+// Boolean (Booléens)
 // Variable de type booleen n'a que 2 valeurs possibles : TRUE ou FALSE
 let booleen = true; //boolean
 let booleen2 = false; //boolean
@@ -110,7 +111,7 @@ let test; //undefined
 
 // La methode typeof() renvoie le type de donnée de la variable
 console.log(typeof string2);
-console.log(typeof number);
+console.log(typeof nombre);
 console.log(typeof decimal);
 console.log(typeof booleen);
 console.log(typeof booleen2);
@@ -119,7 +120,7 @@ console.log(typeof test);
 
 /* --------------------------- 6 - OPERATEURS ARITHMETIQUE --------------------------- */
 
-// +, -, /, *, %
+// +, -, /, *, %, **
 
 let operation = 10 + 5; //Addition
 console.log(`le resultat est ${operation}`); //15
@@ -141,6 +142,7 @@ let number = prompt('Donnez-moi un nombre ?');
 let number2 = prompt('Donnez-moi un deuxieme nombre ?');
 let result = number * number2;
 console.log(`le resultat de la multiplication est ${result}`);
+
 /* --------------------------- 7 - INSTRUCTION CONDITIONNELLES --------------------------- */
 
 // Les opérateurs de comparaison (==, !=, >, >=, <, <=)
@@ -188,11 +190,13 @@ if (condition >= 18 || (permis == true && test === 'toto')) {
 }
 
 /* --------------------------- 9 - CONDITION SWITCH --------------------------- */
+
 /*
     L'instruction switch évalue une expression et 
     selon le résultat obtenu et le cas associé, 
     exécute les instructions correspondantes.
  */
+
 let expr = 'banane';
 
 switch (expr) {
@@ -224,6 +228,16 @@ switch (expr) {
     "while" est utilisé lorsque le nombre d'itérations est inconnu à l'avance et dépend d'une condition spécifique.
 */
 
+// Boucle (For)
+let combien = 9;
+
+for (let i = 0; i < 10; i++) {
+    let res = i * combien;
+    console.log(
+        `${res} la table de multiplication de ${combien} : ${combien} * ${i} = ${res}`
+    );
+}
+
 // BOUCLE while(){...} (tant que)
 let boucle = 5;
 
@@ -241,18 +255,6 @@ do {
     boucle++;
     console.log(boucle);
 } while (boucle <= 10);
-
-// Boucle (For)
-let combien = 9;
-
-for (let i = 0; i < 10; i++) {
-    let res = i * combien;
-    console.log(
-        `${res} la table de multiplication de ${combien} : ${combien} * ${i} = ${res}`
-    );
-}
-
-console.log(res);
 
 /* --------------------------- 11 - FONCTIONS --------------------------- */
 
@@ -289,30 +291,39 @@ console.log(res);
 
 // La portée (scope) d'un objet est la portion de code dans laquelle une variable est accessible.
 
-// PORTEE GLOBAL
-// Une variable déclarée en dehors de toute fonction ou bloc de code a une portée globale.
-// Cela signifie qu'elle peut être utilisée et modifiée dans n'importe quelle partie de votre code,
-// y compris à l'intérieur de fonctions ou de blocs de code.
+/*
+    PORTEE GLOBAL
+    Une variable déclarée en dehors de toute fonction ou bloc de code a une portée globale.
+    Cela signifie qu'elle peut être utilisée et modifiée dans n'importe quelle partie de votre code,
+    y compris à l'intérieur de fonctions ou de blocs de code.
+*/
+const gloable = 'je suis une variable globale';
 
-// PORTEE LOCALE
-// La portée d'une variable déclarée à l'intérieur d'une fonction est limitée à cette fonction.
-// Cela signifie que la variable ne sera pas accessible en dehors de cette fonction.
+/*
+    PORTEE LOCALE
+    La portée d'une variable déclarée à l'intérieur d'une fonction est limitée à cette fonction.
+    Cela signifie que la variable ne sera pas accessible en dehors de cette fonction.
+*/
 function scope() {
     let x = 10;
     console.log(x); // affiche 10
 }
-console.log(x); // génère une erreur : x n'est pas défini dans le scope global
+// console.log(x);
+// génère une erreur : x n'est pas défini dans le scope global
 
-// PORTEE DE BLOCK
-// La portée d'une variable déclarée à l'intérieur d'un bloc est limitée à ce bloc.
-// Cela signifie que la variable ne sera pas accessible en dehors de ce bloc.
+/*
+    PORTEE DE BLOCK
+    La portée d'une variable déclarée à l'intérieur d'un bloc est limitée à ce bloc.
+    Cela signifie que la variable ne sera pas accessible en dehors de ce bloc.
+*/
 if (true) {
     let x = 10;
     console.log(x); // affiche 10
 }
-console.log(x); // génère une erreur : x n'est pas défini dans le scope global
+// console.log(x);
+// génère une erreur : x n'est pas défini dans le scope global
 
-/* --------------------------- TABLEAUX --------------------------- */
+/* --------------------------- 13 - TABLEAUX --------------------------- */
 
 // Un tableau (array) est un type de donnée qui peut contenir plusieurs éléments
 // On peut créer un tableau en utilisant des crochets [] et en y insérant les éléments séparés par des virgules.
@@ -343,8 +354,8 @@ console.log(week.length);
 let fruits = ['banane', 'fraise', 'pomme', 'kiwi'];
 
 // Pour itérer sur les valeurs d'un tableau nous pouvons utiliser la boucle for
-for (let i = 0; i < array.length; i++) {
-    console.log(array[i]);
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
 }
 
 // Rendre parametrable une fonction acceptant un tableau en parametre et affichant chaque case du tableau
@@ -446,7 +457,10 @@ for (let key in sangoku) {
 
 /* --------------------------- 16 - CALLBACK --------------------------- */
 
-// Un  callback (fonction de rappel ) est une fonction qui est passée en tant qu'argument à une autre fonction.
+/*
+    Un callback (fonction de rappel ) est une fonction qui est passée en tant qu'argument à une autre fonction.
+*/
+
 function mathematique(x, y, callback) {
     return callback(x, y);
 }
@@ -486,11 +500,11 @@ for (let i = 0; i < animals.length; i++) {
     console.log(animals[1]);
 }
 
-// forEach est une méthode JavaScript qui permet d'itérer sur les éléments d'un tableau
+// `forEach()` est une méthode JavaScript qui permet d'itérer sur les éléments d'un tableau
 // et d'exécuter une fonction donnée pour chaque élément.
 animals.forEach((animal) => console.log(animal));
 
-//  for...of  permet de parcourir les éléments d'un objet itérable (ex: tableau, string)
+//  `for(...of...)` permet de parcourir les éléments d'un objet itérable (ex: tableau, string)
 for (let animal of animals) {
     console.log(animal);
 }
@@ -498,13 +512,286 @@ for (let animal of animals) {
 /*
     Pour les objets
 */
-const person = {
+const user = {
     firstName: 'John',
     lastName: 'Doe',
     age: 30,
 };
 
-// for...in permet de parcourir les propriétés énumérables d'un objet
-for (let key in person) {
-    console.log(`${key} : ${person[key]}`);
+// `for(...in...)` permet de parcourir les propriétés énumérables d'un objet
+for (let key in user) {
+    console.log(`${key} : ${user[key]}`);
 }
+
+/* --------------------------- 18 - Manipulation du DOM --------------------------- */
+
+/*  -------------------------------------------
+    Methodes de selecteurs JavaScript
+    -------------------------------------------
+*/
+
+// * La methode getElementById()
+const elementById = document.getElementById('element-by-id');
+elementById.style.color = 'red';
+
+/*
+    * La methode getElementsByTagName()
+    getElementsByClassName renvoi une HTMLCollection 
+    sur laquelle on pourra itérer avec la boucle for()
+*/
+const elementByTagName = document.getElementsByTagName('p');
+for (let i = 0; i < elementByTagName.length; i++) {
+    elementByTagName[i].style.color = 'blue';
+}
+
+/*
+    * La methode getElementsByClassName()
+    getElementsByClassName renvoi une HTMLCollection
+    sur laquelle on pourra itérer avec la boucle for()
+*/
+const elementByClassName = document.getElementsByClassName('element-by-class');
+
+for (let i = 0; i < elementByClassName.length; i++) {
+    elementByClassName[i].style.color = 'orange';
+}
+
+// * La methode querySelector
+const element = document.querySelector('p');
+element.style.color = 'green';
+
+/*
+    * La methode querySelectorAll
+    querySelectorAll renvoi une NodeList
+    sur laquelle on pourra itérer avec la boucle for() ou la méthode forEach()
+*/
+const elementWithQuerySelectorAll =
+    document.querySelectorAll('.element-by-class');
+
+// Boucle for()
+for (let i = 0; i < elementWithQuerySelectorAll.length; i++) {
+    elementWithQuerySelectorAll[i].style.color = 'khaki';
+}
+
+// Boucle forEach()
+elementWithQuerySelectorAll.forEach((toto) => (toto.style.fontWeight = 'bold'));
+
+/*  ---------------------------------------------
+    Quelques proprietes liées aux éléments du DOM
+    ---------------------------------------------
+*/
+
+const subTitle = document.querySelector('#subtitle');
+
+// La propriété `style` permet de modifier le style
+subTitle.style.color = 'pink';
+
+// La propriété `textContent`  permet de récupérer ou de définir le contenu textuel d'un élément HTML.
+subTitle.textContent = 'Je suis un titre modifié en javascript';
+
+// La propriété `innerText` permet de récupérer ou de définir le contenu textuel d'un élément HTML.
+subTitle.innerText = 'Je suis un titre modifié en javascript';
+
+// La propriété `innerHTML` permet de récupérer ou de définir le contenu HTML d'un élément HTML.
+subTitle.innerHTML = 'Je suis un <em>titre</strong> modifié en javascript';
+
+// La propriété `classList` permet de récupérer la liste des classes d'un élément HTML.
+console.log(subTitle.classList);
+
+// La méthode `contains()` permet de vérifier si un élément HTML possède une classe donnée.
+console.log(subTitle.classList.contains('active'));
+
+// La méthode `remove()` permet de supprimer une classe d'un élément HTML.
+subTitle.classList.remove('active');
+
+// La méthode `add()` permet d'ajouter une classe à un élément HTML.
+subTitle.classList.add('active');
+
+// La méthode `toggle()` permet d'ajouter une classe à un élément HTML si elle n'existe pas, sinon elle la supprime.
+subTitle.classList.toggle('active');
+
+// La méthode `setAttribute()` permet de définir la valeur d'un attribut HTML.
+subTitle.setAttribute('title', 'Je suis un titre');
+
+// La méthode `getAttribute()` permet de récupérer la valeur d'un attribut HTML.
+console.log(subTitle.getAttribute('title'));
+
+// La méthode `removeAttribute()` permet de supprimer un attribut HTML.
+subTitle.removeAttribute('title');
+
+// La propriété `src` permet de récupérer ou de définir la valeur de l'attribut `src` d'une balise `img`.
+const image = document.querySelector('img');
+image.src = 'https://picsum.photos/200/300';
+
+// La propriété `href` permet de récupérer ou de définir la valeur de l'attribut `href` d'une balise `a`.
+const link = document.querySelector('a');
+link.href = 'https://www.google.com';
+
+// La propriété `value` permet de récupérer ou de définir la valeur d'un élément HTML.
+const input = document.querySelector('input');
+input.value = 'Je suis un input modifié en javascript';
+
+/*  ---------------------------------------------
+    Evénements en JavaScript
+    ---------------------------------------------   
+    La méthode addEventListener() permet de définir un écouteur d'événement sur un élément HTML.
+    Cet écouteur est appelé chaque fois que l'événement spécifié se produit sur l'élément.
+    ---------------------------------------------
+    La methode addEventListener() prend 2 paramètres:
+    1. Le nom de l'événement (click, mouseover, mouseout, keyup, keydown, keypress, submit, change, ...)
+    2. Une fonction callback qui sera appelée à chaque fois que l'événement se produit
+*/
+
+subTitle.addEventListener('click', function () {
+    if (subTitle.style.color == 'pink') {
+        subTitle.style.color = 'red';
+    } else {
+        subTitle.style.color = 'pink';
+    }
+});
+
+// subTitle.addEventListener('click', function () {
+//     if(!subTitle.classList.contains('active')){
+//         subTitle.classList.add('active')
+//     } else {
+//         subTitle.classList.remove('active')
+//     }
+// });
+
+subTitle.addEventListener('click', function () {
+    subTitle.classList.toggle('active');
+});
+
+/* --------------------------- 19 - Windows --------------------------- */
+
+/*
+    Le DOM (Document Object Model) en JavaScript 
+    est une représentation en mémoire d'un document HTML chargé dans un navigateur.
+    Le DOM représente chaque élément du document comme un objet JavaScript 
+    qui peut être manipulé et modifié à travers le code JavaScript.
+*/
+
+/*
+    L'objet window en JavaScript est un objet global qui représente la fenêtre du navigateur.
+    Cet objet est créé automatiquement lorsque la page Web est chargée
+*/
+
+console.log(window);
+
+/*
+    L'objet window possède plus de 150 propriétés et méthodes
+    L'objet window est un objet important en JavaScript
+    car il fournit une interface entre le code JavaScript et la fenêtre du navigateur.
+*/
+
+// La propriété `window.document` permet d'accéder à l'objet document
+console.log(window.document);
+
+// La propriété `window.location` permet d'accéder à l'objet location
+console.log(window.location);
+
+// La propriété `window.navigator` permet d'accéder à l'objet navigator
+console.log(window.navigator);
+
+// La propriété `window.history` permet d'accéder à l'objet history
+console.log(window.history);
+
+// La propriété `window.screen` permet d'accéder à l'objet screen
+console.log(window.screen);
+
+// La propriété `window.localStorage` permet d'accéder à l'objet localStorage
+console.log(window.localStorage);
+
+// La propriété `window.sessionStorage` permet d'accéder à l'objet sessionStorage
+console.log(window.sessionStorage);
+
+// La propriété `window.console` permet d'accéder à l'objet console
+console.log(window.console);
+
+// La propriété `window.alert()` permet d'afficher une boite de dialogue
+window.alert('Hello World !');
+
+// La propriété `window.confirm()` permet d'afficher une boite de dialogue
+// avec deux boutons : OK et Annuler
+// const confirm = window.confirm('Voulez-vous vraiment supprimer cet élément ?');
+// console.log(confirm);
+
+// La propriété `window.prompt()` permet d'afficher une boite de dialogue
+// avec un champ de saisie
+// const prompt = window.prompt('Quel est votre nom ?');
+// console.log(prompt);
+
+// La propriété `window.open()` permet d'ouvrir une nouvelle fenêtre
+// const newWindow = window.open('https://www.google.com', '_blank');
+// console.log(newWindow);
+
+// La propriété `window.close()` permet de fermer une fenêtre
+// newWindow.close();
+
+// La propriété `window.print()` permet d'imprimer la page courante
+// window.print();
+
+// La propriété `window.scrollTo()` permet de faire défiler la page jusqu'à un élément
+// window.scrollTo(0, 1000);
+
+// La propriété `window.scrollBy()` permet de faire défiler la page
+// window.scrollBy(0, 100);
+
+// La propriété `window.scroll()` permet de faire défiler la page
+// window.scroll(0, 100);
+
+// La propriété `window.scrollX` permet de récupérer la position horizontale du scroll
+console.log(window.scrollX);
+
+// La propriété `window.scrollY` permet de récupérer la position verticale du scroll
+console.log(window.scrollY);
+
+// La propriété `window.innerHeight` permet de récupérer la hauteur de la fenêtre
+console.log(window.innerHeight);
+
+// La propriété `window.innerWidth` permet de récupérer la largeur de la fenêtre
+console.log(window.innerWidth);
+
+// La propriété `window.outerHeight` permet de récupérer la hauteur de la fenêtre
+console.log(window.outerHeight);
+
+// La propriété `window.outerWidth` permet de récupérer la largeur de la fenêtre
+console.log(window.outerWidth);
+
+// La propriété `window.screenX` permet de récupérer la position horizontale de la fenêtre
+console.log(window.screenX);
+
+// La propriété `window.screenY` permet de récupérer la position verticale de la fenêtre
+console.log(window.screenY);
+
+// La propriété `window.screenLeft` permet de récupérer la position horizontale de la fenêtre
+console.log(window.screenLeft);
+
+// La propriété `window.screenTop` permet de récupérer la position verticale de la fenêtre
+console.log(window.screenTop);
+
+// La propriété `window.screen.availHeight` permet de récupérer la hauteur de l'écran
+console.log(window.screen.availHeight);
+
+// La propriété `window.screen.availWidth` permet de récupérer la largeur de l'écran
+console.log(window.screen.availWidth);
+
+// La propriété `window.screen.height` permet de récupérer la hauteur de l'écran
+console.log(window.screen.height);
+
+// La propriété `window.screen.width` permet de récupérer la largeur de l'écran
+console.log(window.screen.width);
+
+// La propriété `window.screen.pixelDepth` permet de récupérer la profondeur de couleur de l'écran
+
+// La propriété `window.screen.colorDepth` permet de récupérer la profondeur de couleur de l'écran
+console.log(window.screen.colorDepth);
+
+// La propriété `window.screen.orientation` permet de récupérer l'orientation de l'écran
+
+// La propriété `window.screen.orientation.angle` permet de récupérer l'angle de l'orientation de l'écran
+
+// La propriété `window.screen.orientation.type` permet de récupérer le type de l'orientation de l'écran
+
+// La propriété `window.screen.orientation.lock()` permet de verrouiller l'orientation de l'écran
+
+// La propriété `window.screen.orientation.unlock()` permet de déverrouiller l'orientation de l'écran

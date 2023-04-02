@@ -1,74 +1,54 @@
-/* --------------------------- Manipulation du DOM --------------------------- */
-
-/*
-    Le DOM (Document Object Model) en JavaScript 
-    est une représentation en mémoire d'un document HTML chargé dans un navigateur.
-    Le DOM représente chaque élément du document comme un objet JavaScript 
-    qui peut être manipulé et modifié à travers le code JavaScript.
-*/
-
-/*
-    L'objet window en JavaScript est un objet global qui représente la fenêtre du navigateur.
-    Cet objet est créé automatiquement lorsque la page Web est chargée
-*/
-
-console.log(window);
-
-/*
-    L'objet window possède plus de 150 propriétés et méthodes
-    L'objet window est un objet important en JavaScript
-    car il fournit une interface entre le code JavaScript et la fenêtre du navigateur.
-*/
+/* --------------------------- 18 - Manipulation du DOM --------------------------- */
 
 /*  -------------------------------------------
-    Plusieurs methodes de selecteurs JavaScript
+    Methodes de selecteurs JavaScript
     -------------------------------------------
 */
 
-// La methode getElementById()
+// ? La methode getElementById()
 const elementById = document.getElementById('element-by-id');
 elementById.style.color = 'red';
 
 /*
-    La methode getElementsByTagName()
-    ? getElementsByClassName renvoi une HTMLCollection 
+    ? La methode getElementsByTagName()
+    getElementsByClassName renvoi une HTMLCollection 
     sur laquelle on pourra itérer avec la boucle for()
 */
-const paragraphe = document.getElementsByTagName('p');
-for (let i = 0; i < paragraphe.length; i++) {
-    paragraphe[i].style.color = 'blue';
+const elementByTagName = document.getElementsByTagName('p');
+for (let i = 0; i < elementByTagName.length; i++) {
+    elementByTagName[i].style.color = 'blue';
 }
 
 /*
-    La methode getElementsByClassName()
-    ? getElementsByClassName renvoi une HTMLCollection
+    ? La methode getElementsByClassName()
+    getElementsByClassName renvoi une HTMLCollection
     sur laquelle on pourra itérer avec la boucle for()
 */
-const elementByClass = document.getElementsByClassName('element-by-class');
+const elementByClassName = document.getElementsByClassName('element-by-class');
 
-for (let i = 0; i < elementByClass.length; i++) {
-    elementByClass[i].style.color = 'orange';
+for (let i = 0; i < elementByClassName.length; i++) {
+    elementByClassName[i].style.color = 'orange';
 }
 
-// La methode querySelector
-const querySelector = document.querySelector('p');
-querySelector.style.color = 'green';
+// ? La methode querySelector
+const element = document.querySelector('p');
+element.style.color = 'green';
 
 /*
-    La methode querySelectorAll
-    ? querySelectorAll renvoi une NodeList
+    ? La methode querySelectorAll
+    querySelectorAll renvoi une NodeList
     sur laquelle on pourra itérer avec la boucle for() ou la méthode forEach()
 */
-const elementByClassWithQuerySelectorAll =
+const elementWithQuerySelectorAll =
     document.querySelectorAll('.element-by-class');
 
 // Boucle for()
-for (let i = 0; i < elementByClassWithQuerySelectorAll.length; i++) {
-    elementByClassWithQuerySelectorAll[i].style.color = 'khaki';
+for (let i = 0; i < elementWithQuerySelectorAll.length; i++) {
+    elementWithQuerySelectorAll[i].style.color = 'khaki';
 }
 
-// Boucle forEach
-elementByClassWithQuerySelectorAll.forEach(
+// Boucle forEach()
+elementWithQuerySelectorAll.forEach(
     (toto) => (toto.style.fontWeight = 'bold')
 );
 
@@ -76,26 +56,75 @@ elementByClassWithQuerySelectorAll.forEach(
     Quelques proprietes liées aux éléments du DOM
     ---------------------------------------------
 */
+
 const subTitle = document.querySelector('#subtitle');
 
 // La propriété `style` permet de modifier le style
 subTitle.style.color = 'pink';
 
-// La propriété `extContent`  permet de récupérer ou de définir le contenu textuel d'un élément HTML.
+// La propriété `textContent`  permet de récupérer ou de définir le contenu textuel d'un élément HTML.
 subTitle.textContent = 'Je suis un titre modifié en javascript';
 
-/*
+// La propriété `innerText` permet de récupérer ou de définir le contenu textuel d'un élément HTML.
+subTitle.innerText = 'Je suis un titre modifié en javascript';
+
+// La propriété `innerHTML` permet de récupérer ou de définir le contenu HTML d'un élément HTML.
+subTitle.innerHTML = 'Je suis un <em>titre</strong> modifié en javascript';
+
+// La propriété `classList` permet de récupérer la liste des classes d'un élément HTML.
+console.log(subTitle.classList);
+
+// La méthode `contains()` permet de vérifier si un élément HTML possède une classe donnée.
+console.log(subTitle.classList.contains('active'));
+
+// La méthode `remove()` permet de supprimer une classe d'un élément HTML.
+subTitle.classList.remove('active');
+
+// La méthode `add()` permet d'ajouter une classe à un élément HTML.
+subTitle.classList.add('active');
+
+// La méthode `toggle()` permet d'ajouter une classe à un élément HTML si elle n'existe pas, sinon elle la supprime.
+subTitle.classList.toggle('active');
+
+// La méthode `setAttribute()` permet de définir la valeur d'un attribut HTML.
+subTitle.setAttribute('title', 'Je suis un titre');
+
+// La méthode `getAttribute()` permet de récupérer la valeur d'un attribut HTML.
+console.log(subTitle.getAttribute('title'));
+
+// La méthode `removeAttribute()` permet de supprimer un attribut HTML.
+subTitle.removeAttribute('title');
+
+// La propriété `src` permet de récupérer ou de définir la valeur de l'attribut `src` d'une balise `img`.
+const image = document.querySelector('img');
+image.src = 'https://picsum.photos/200/300';
+
+// La propriété `href` permet de récupérer ou de définir la valeur de l'attribut `href` d'une balise `a`.
+const link = document.querySelector('a');
+link.href = 'https://www.google.com';
+
+// La propriété `value` permet de récupérer ou de définir la valeur d'un élément HTML.
+const input = document.querySelector('input');
+input.value = 'Je suis un input modifié en javascript';
+
+/*  ---------------------------------------------
+    Evénements en JavaScript
+    ---------------------------------------------   
     La méthode addEventListener() permet de définir un écouteur d'événement sur un élément HTML.
     Cet écouteur est appelé chaque fois que l'événement spécifié se produit sur l'élément.
+    ---------------------------------------------
+    La methode addEventListener() prend 2 paramètres:
+    1. Le nom de l'événement (click, mouseover, mouseout, keyup, keydown, keypress, submit, change, ...)
+    2. Une fonction callback qui sera appelée à chaque fois que l'événement se produit
 */
 
-// subTitle.addEventListener('click', function () {
-//     if (subTitle.style.color == 'pink') {
-//         subTitle.style.color = 'red';
-//     } else {
-//         subTitle.style.color = 'pink';
-//     }
-// });
+subTitle.addEventListener('click', function () {
+    if (subTitle.style.color == 'pink') {
+        subTitle.style.color = 'red';
+    } else {
+        subTitle.style.color = 'pink';
+    }
+});
 
 // subTitle.addEventListener('click', function () {
 //     if(!subTitle.classList.contains('active')){

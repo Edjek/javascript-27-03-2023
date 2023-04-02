@@ -1,7 +1,7 @@
 /* --------------------------- FONCTIONS AVANCEES --------------------------- */
 
 /*
-    Pour les tableaux
+    Arrays
 */
 const animals = ['tigre', 'loup', 'chouette', 'ours'];
 
@@ -13,13 +13,13 @@ for (let i = 0; i < animals.length; i++) {
 // et d'exécuter une fonction donnée pour chaque élément.
 animals.forEach((animal) => console.log(animal));
 
-//  for...of  permet de parcourir les éléments d'un objet itérable (ex: tableau, string)
+// for...of  permet de parcourir les éléments d'un objet itérable (ex: tableau, string)
 for (let animal of animals) {
     console.log(animal);
 }
 
 /*
-    Pour les objets
+    Objects
 */
 const person = {
     firstName: 'John',
@@ -31,3 +31,15 @@ const person = {
 for (let key in person) {
     console.log(`${key} : ${person[key]}`);
 }
+
+let pets = ['chien', 'chat', 'poisson', 'oiseau'];
+
+function forEach(array, callback) {
+    for (let i = 0; i < array.length; i++) {
+        callback(array[i]);
+    }
+}
+
+forEach(pets, function (animal) {
+    console.log(animal);
+});
