@@ -236,66 +236,12 @@
 
 // Voici un tableau qui contient 6 objets utilisateurs
 let users = [
-    {
-        prenom: "Alice",
-        nom: "Dupont",
-        age: 28,
-        sexe: "Femme",
-        animauxPreferes: ["chat", "chien"],
-        description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
-        }
-    },
-    {
-        prenom: "Bob",
-        nom: "Martin",
-        age: 35,
-        sexe: "Homme",
-        animauxPreferes: ["poisson", "oiseau"],
-        description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
-        }
-    },
-    {
-        prenom: "Claire",
-        nom: "Rousseau",
-        age: 42,
-        sexe: "Femme",
-        animauxPreferes: ["cheval", "lapin"],
-        description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
-        }
-    },
-    {
-        prenom: "David",
-        nom: "Lefebvre",
-        age: 22,
-        sexe: "Homme",
-        animauxPreferes: ["chat", "chien"],
-        description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
-        }
-    },
-    {
-        prenom: "Emma",
-        nom: "Garcia",
-        age: 29,
-        sexe: "Femme",
-        animauxPreferes: ["chien", "hamster"],
-        description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
-        }
-    },
-    {
-        prenom: "François",
-        nom: "Moreau",
-        age: 46,
-        sexe: "Homme",
-        animauxPreferes: ["chat", "oiseau"],
-        description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
-        }
-    }
+    { prenom: 'Alice', nom: 'Dupont', age: 28, sexe: 'Femme', animauxPreferes: ['chat', 'chien'], description: function () { return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(', ')}.`; }, },
+    { prenom: 'Bob', nom: 'Martin', age: 35, sexe: 'Homme', animauxPreferes: ['poisson', 'oiseau'], description: function () { return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(', ')}.`; }, },
+    { prenom: 'Claire', nom: 'Rousseau', age: 42, sexe: 'Femme', animauxPreferes: ['cheval', 'lapin'], description: function () { return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(', ')}.`; }, },
+    { prenom: 'David', nom: 'Lefebvre', age: 22, sexe: 'Homme', animauxPreferes: ['chat', 'chien'], description: function () { return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(', ')}.`; }, },
+    { prenom: 'Emma', nom: 'Garcia', age: 29, sexe: 'Femme', animauxPreferes: ['chien', 'hamster'], description: function () { return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(', ')}.`; }, },
+    { prenom: 'François', nom: 'Moreau', age: 46, sexe: 'Homme', animauxPreferes: ['chat', 'oiseau'], description: function () { return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(', ')}.`; }, },
 ];
 
 // Faire une boucle sur le tableau users
