@@ -165,7 +165,7 @@
 // Déclarer un tableau qui contient les notes de l'utilisateur
 // Déclarer une fonction qui prend en parametre un tableau, qui calcule la moyenne de l'utilisateur
 // Utiliser la fonction precedente pour savoir si l'utilisateur est reçu ou non
-// Affiche dans la console si l'utilisateur est reçu ou non
+// Afficher dans la console si l'utilisateur est reçu ou non
 // Appeler la fonction en lui passant le tableau en parametre
 
 // Déclarer une fonction qui prend en parametre une moyenne et qui retourne la mention de l'utilisateur

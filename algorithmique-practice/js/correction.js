@@ -29,31 +29,31 @@
 
 // Afficher un message de bienvenue dans la console
 // 'Bonjour, je suis un message affiché dans la console'
-// console.log('Bonjour, je suis un message affiché dans la console');
+console.log('Bonjour, je suis un message affiché dans la console');
 
 // Creer une variable qui contient un message de bienvenue
 // 'Bonjour, je suis une variable qui contient un message de bienvenue'
 // Afficher le message de bienvenue dans la console
 const message = 'Bonjour, je suis une variable qui contient un message de bienvenue'
-// console.log(message);
+console.log(message);
 
 
 // Creer une variable qui contient un message
 // 'Je decouvre le javascript'
 // Concatener les deux variables et afficher le resultat dans la console
 const discover = 'Je decouvre le javascript'
-// console.log(`${message}, ${discover}`);
+console.log(`${message}, ${discover}`);
 
 // Creer une variable qui contient votre prenom
 // Afficher la console le message suivant avec la variable qui contient votre prenom
 // 'Bonjour, je m'appelle XXXX'
 const userName = 'Rachid'
 
-// console.log("Bonjour, je m'appelle " + userName);
-// console.log('Bonjour, je m\'appelle ' + userName);
-// console.log(`Bonjour, je m'appelle ${userName}`);
 
 // Afficher le message avec les 3 facons de faire une concaténation
+console.log("Bonjour, je m'appelle " + userName);
+console.log('Bonjour, je m\'appelle ' + userName);
+console.log(`Bonjour, je m'appelle ${userName}`);
 
 
 // ---------------------------------- Partie 2 ----------------------------------
@@ -64,7 +64,7 @@ const userName = 'Rachid'
 function showMessage() {
     console.log('Bonjour, je suis une fonction qui affiche un message de bienvenue dans la console');
 }
-// showMessage()
+showMessage()
 
 // Creer une fonction qui affiche un message de bienvenue dans la console et qui prend en parametre un nom
 // 'Bonjour XXXX, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend un parametre'
@@ -72,7 +72,7 @@ function showMessage() {
 const showMessageWithParameter = function (name) {
     console.log(`Bonjour ${name}, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend un parametre`);
 }
-// showMessageWithParameter('rachid')
+showMessageWithParameter('rachid')
 
 // Creer une fonction qui affiche un message de bienvenue dans la console et qui prend en parametre un nom et un age
 // 'Bonjour XXXX, vous avez XXXX ans, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend deux parametres'
@@ -80,7 +80,7 @@ const showMessageWithParameter = function (name) {
 const showMessageWithTwoParameter = (name, age) => {
     console.log(`Bonjour ${name}, vous avez ${age} ans, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend deux parametres, à plus tard ${name}`);
 }
-// showMessageWithTwoParameter('Rachid', '38')
+showMessageWithTwoParameter('Rachid', '38')
 
 
 // ---------------------------------- Partie 3 ----------------------------------
@@ -106,7 +106,7 @@ function checkAge(age) {
         console.log('Vous êtes mineur');
     }
 }
-// checkAge(12)
+checkAge(12)
 
 // Transformer la fonction pour retourner true si l'utilisateur est majeur et false sinon
 function isLegal(age) {
@@ -116,7 +116,7 @@ function isLegal(age) {
         return false
     }
 }
-// console.log(isLegal(38));
+console.log(isLegal(38));
 
 // Décider de l'animal préféré de l'utilisateur en fonction de son choix
 //     Si il rentre "chat" ou "chien" => "Vous aimez les animaux domestiques !"
@@ -169,29 +169,29 @@ function checkAnimalWithSwitch(animal) {
             break
     }
 }
-// checkAnimalWithSwitch('lion')
+checkAnimalWithSwitch('lion')
 
 
 // ---------------------------------- Partie 4 ----------------------------------
 
 // Faite une boucle qui affiche dans la console 5 fois le message suivant
 // 'Je suis une boucle'
-// for (let i = 0; i < 5; i++) {
-//     console.log('Je suis une boucle');
-// }
+for (let i = 0; i < 5; i++) {
+    console.log('Je suis une boucle');
+}
 
 // Faire une boucle qui affiche dans la console les nombres de 1 à 10
-// for (let i = 1; i <= 10; i++) {
-//     console.log(i);
-// }
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
 
 // Demander à l'utilisateur de rentrer un nombre
 // Faire une boucle qui affiche dans la console les nombres de 1 à ce nombre
 const number = 34
 
-// for (let i = 1; i <= number; i++) {
-//     console.log(i);
-// }
+for (let i = 1; i <= number; i++) {
+    console.log(i);
+}
 
 // Demander à l'utilisateur de rentrer un nombre
 // Faire une boucle qui affiche dans la console la table de multiplication de ce nombre
@@ -199,12 +199,12 @@ const number = 34
 // '5 x 1 = 5'
 // '5 x 2 = 10'
 // '5 x 3 = 15'
-// const number2 = 45
+const number2 = 45
 
-// for (let i = 0; i <= 10; i++) {
-//     const res = number2 * i
-//     console.log(`${number2} x ${i} = ${res}`);
-// }
+for (let i = 0; i <= 10; i++) {
+    const res = number2 * i
+    console.log(`${number2} x ${i} = ${res}`);
+}
 
 // Faire une fonction qui prend en parametre un nombre
 // Et qui affiche dans la console la table de multiplication de ce nombre
@@ -214,14 +214,14 @@ const multiplication = (number) => {
         console.log(`${number} x ${i} = ${res}`);
     }
 }
-// multiplication(100)
+multiplication(100)
 
 // Appeler la fonction en lui passant le nombre 5 en parametre
+multiplication(5)
 // Appeler la fonction en lui passant le nombre 7 en parametre
+multiplication(7)
 // Appeler la fonction en lui passant le nombre 9 en parametre
-// multiplication(5)
-// multiplication(7)
-// multiplication(9)
+multiplication(9)
 
 // Demander à l'utilisateur de rentrer un nombre
 // Creer une fonction qui prend en parametre un nombre
@@ -251,15 +251,15 @@ const months = ['janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin', 'juillet',
 // Afficher dans la console le mois de avril
 // Afficher dans la console le mois de aout
 // Afficher dans la console le mois de octobre
-// console.log(months[2]);
-// console.log(months[3]);
-// console.log(months[7]);
-// console.log(months[9]);
+console.log(months[2]);
+console.log(months[3]);
+console.log(months[7]);
+console.log(months[9]);
 
 // Faire une boucle qui affiche dans la console les mois de l'année
-// for(let i =0; i<months.length; i++){
-//     console.log(months[i]);
-// }
+for (let i = 0; i < months.length; i++) {
+    console.log(months[i]);
+}
 
 // Creer une fonction qui affiche dans la console les mois de l'année
 // Appeler la fonction 2 fois
@@ -268,7 +268,7 @@ function displayMonth() {
         console.log(months[i]);
     }
 }
-// displayMonth()
+displayMonth()
 
 // Déclarer une variable qui contient un nombre
 // Si le nombre est divisible par 3 afficher dans un alert 'Fizz'
@@ -335,7 +335,6 @@ for (let i = 0; i < notes.length; i++) {
 res /= notes.length
 console.log(res);
 
-
 // Algorithme de calcul de moyenne avec tableau et boucle et fonction
 // Déclarer un tableau qui contient les notes de l'utilisateur
 // Déclarer une fonction qui prend en parametre un tableau, qui calcule la moyenne de l'utilisateur et qui retourne la moyenne
@@ -359,6 +358,7 @@ function isPass(average) {
         return false
     }
 }
+console.log(isPass(12));
 
 // Algorithme de calcul de moyenne avec tableau et boucle et fonction et condition
 // Déclarer un tableau qui contient les notes de l'utilisateur
@@ -366,6 +366,14 @@ function isPass(average) {
 // Utiliser la fonction precedente pour savoir si l'utilisateur est reçu ou non
 // Affiche dans la console si l'utilisateur est reçu ou non
 // Appeler la fonction en lui passant le tableau en parametre
+function graduate(notes) {
+    const moyenne = average(notes)
+    if (isPass(moyenne) == true) {
+        console.log('Vous êtes reçu');
+    } else {
+        console.log('Vous avez échoué');
+    }
+}
 
 // Déclarer une fonction qui prend en parametre une moyenne et qui retourne la mention de l'utilisateur
 // Si la moyenne est supérieure ou égale à 10 => mention "Très bien"
@@ -389,13 +397,22 @@ function mention(note) {
 
 // Utiliser switch pour faire la meme chose
 
-// Declaration d'un tableau qui contient les notes de l'utilisateur
+
+// Déclaration d'un tableau qui contient les notes de l'utilisateur
 // Déclarer une fonction qui affiche dans la console la mention de l'utilisateur en fonction de sa moyenne
 // Calculer la moyenne de l'utilisateur
 // Afficher dans la console si l'utilisateur est reçu ou non avec la fonction que vous avez créé
 // Afficher dans la console la mention de l'utilisateur avec la fonction que vous avez créé
-
-
+const displayGraduate = (notes) => {
+    const res = parseInt(average(notes))
+    isPass(res)
+    let received = ''
+    if (isPass(res) == true) {
+        console.log('vous êtes reçu');
+    } else {
+        console.log('vous avez échouez');
+    }
+}
 
 // Déclarer une fonction qui prend en parametre un tableau de notes et un nom
 // Calculer la moyenne de l'utilisateur
@@ -403,7 +420,6 @@ function mention(note) {
 // Recuperer la mention de l'utilisateur
 // Afficher dans la console le nom de l'utilisateur, sa moyenne, s'il est reçu ou non et sa mention
 function isGraduate(notes, lastName) {
-
     const res = parseInt(average(notes))
     isPass(res)
     let received = ''
@@ -439,7 +455,6 @@ const car = {
     optionsList: ['climatisation', 'vitres electriques', 'gps', 'bluetooth', 'siege chauffant'],
     description: function () { return `La voiture est une ${this.marque} ${this.modele} ${this.couleur} de ${this.nbPortes} portes et ${this.nbVitesses} vitesses` },
     descriptionOptions: function () { return `La voiture est équipée de la ${this.optionsList[0]}, des vitres electriques, du gps, du bluetooth et des sieges chauffants` }
-
 }
 
 // Afficher dans la console la marque de la voiture
@@ -487,8 +502,19 @@ console.log(car.descriptionOptions());
 //     sexe => sexe de l'utilisateur
 //     animalPrefere => animal préféré de l'utilisateur
 //     description => () => "Je m'appelle XXXX et j'ai XXXX ans et j'aime les XXXXX"
+const person = {
+    prenom: 'rachid',
+    nom: 'edjekouane',
+    age: 39,
+    sexe: 'homme',
+    animalPrefere: 'chat',
+    description: function () {
+        return `Je m'appelle ${this.prenom} et j'ai ${this.age} ans et j'aime les ${this.animalPrefere}s`
+    },
+}
 
 // Afficher dans la console la description de l'utilisateur
+console.log(person.description());
 
 // Voici un tableau qui contient 6 objets utilisateurs
 let users = [
@@ -567,18 +593,24 @@ let users = [
 for (let i = 0; i < users.length; i++) {
     console.log(users[i].description());
 }
+
 // Utiliser la méthode forEach()
 users.forEach((user) => {
     console.log(user.description());
 })
+
 // Utiliser la méthode for(...of...)
 for (const user of users) {
-    console.log(users[i].description());
+    console.log(user.description());
 }
 
 // Choisissez la méthode qui vous semble la plus adaptée pour itérer sur le tableau users
 // Boucler sur chaque utilisateur pour afficher toutes les informations de l'utilisateur
-
+users.forEach((user) => {
+    for (const key in user) {
+        console.log(`${key} : ${user[key]}`);
+    }
+})
 
 // ---------------------------------- Partie 7 ----------------------------------
 
