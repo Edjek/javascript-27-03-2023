@@ -44,6 +44,7 @@
 
 // Afficher le message avec les 3 facons de faire une concaténation
 
+
 // ---------------------------------- Partie 2 ----------------------------------
 
 // Creer une fonction qui affiche un message de bienvenue dans la console
@@ -57,6 +58,7 @@
 // Creer une fonction qui affiche un message de bienvenue dans la console et qui prend en parametre un nom et un age
 // 'Bonjour XXXX, vous avez XXXX ans, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend deux parametres'
 // Appeler la fonction en lui passant votre prenom et votre age en parametre
+
 
 // ---------------------------------- Partie 3 ----------------------------------
 
@@ -78,6 +80,7 @@
 // Transformer l'exercice en fonction qui prend en parametre un animal et qui retourne le message correspondant
 
 // Utiliser la methode switch pour faire la meme chose
+
 
 // ---------------------------------- Partie 4 ----------------------------------
 
@@ -108,6 +111,7 @@
 // Et qui affiche dans la console si le nombre est pair ou impair (modulo)
 // Appeler la fonction en lui passant le nombre 5 en parametre
 // Appeler la fonction en lui passant le nombre 256 en parametre
+
 
 // ---------------------------------- Partie 5 ----------------------------------
 
@@ -154,8 +158,7 @@
 // Appeler la fonction en lui passant le tableau en parametre
 
 // Algorithme pour savoir si l'utilisateur est reçu ou non
-// Déclarer un tableau qui contient les notes de l'utilisateur
-// Déclarer une fonction qui prend en parametre un tableau, qui calcule la moyenne de l'utilisateur
+// Elle prend en parametre une moyenne
 // Retourner true si la moyenne est supérieure ou égale à 10 et false sinon
 
 // Algorithme de calcul de moyenne avec tableau et boucle et fonction et condition
@@ -185,6 +188,7 @@
 // Verifier si l'utilisateur est reçu ou non
 // Recuperer la mention de l'utilisateur
 // Afficher dans la console le nom de l'utilisateur, sa moyenne, s'il est reçu ou non et sa mention
+
 
 // ---------------------------------- Partie 6 ----------------------------------
 
@@ -233,176 +237,110 @@
 // Voici un tableau qui contient 6 objets utilisateurs
 let users = [
     {
-        prenom: 'Alice',
-        nom: 'Dupont',
+        prenom: "Alice",
+        nom: "Dupont",
         age: 28,
-        sexe: 'Femme',
-        animauxPreferes: ['chat', 'chien'],
+        sexe: "Femme",
+        animauxPreferes: ["chat", "chien"],
         description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age
-                } ans et j'aime les ${this.animauxPreferes.join(', ')}.`;
-        },
+            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
+        }
     },
     {
-        prenom: 'Bob',
-        nom: 'Martin',
+        prenom: "Bob",
+        nom: "Martin",
         age: 35,
-        sexe: 'Homme',
-        animauxPreferes: ['poisson', 'oiseau'],
+        sexe: "Homme",
+        animauxPreferes: ["poisson", "oiseau"],
         description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age
-                } ans et j'aime les ${this.animauxPreferes.join(', ')}.`;
-        },
+            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
+        }
     },
     {
-        prenom: 'Claire',
-        nom: 'Rousseau',
+        prenom: "Claire",
+        nom: "Rousseau",
         age: 42,
-        sexe: 'Femme',
-        animauxPreferes: ['cheval', 'lapin'],
+        sexe: "Femme",
+        animauxPreferes: ["cheval", "lapin"],
         description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age
-                } ans et j'aime les ${this.animauxPreferes.join(', ')}.`;
-        },
+            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
+        }
     },
     {
-        prenom: 'David',
-        nom: 'Lefebvre',
+        prenom: "David",
+        nom: "Lefebvre",
         age: 22,
-        sexe: 'Homme',
-        animauxPreferes: ['chat', 'chien'],
+        sexe: "Homme",
+        animauxPreferes: ["chat", "chien"],
         description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age
-                } ans et j'aime les ${this.animauxPreferes.join(', ')}.`;
-        },
+            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
+        }
     },
     {
-        prenom: 'Emma',
-        nom: 'Garcia',
+        prenom: "Emma",
+        nom: "Garcia",
         age: 29,
-        sexe: 'Femme',
-        animauxPreferes: ['chien', 'hamster'],
+        sexe: "Femme",
+        animauxPreferes: ["chien", "hamster"],
         description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age
-                } ans et j'aime les ${this.animauxPreferes.join(', ')}.`;
-        },
+            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
+        }
     },
     {
-        prenom: 'François',
-        nom: 'Moreau',
+        prenom: "François",
+        nom: "Moreau",
         age: 46,
-        sexe: 'Homme',
-        animauxPreferes: ['chat', 'oiseau'],
+        sexe: "Homme",
+        animauxPreferes: ["chat", "oiseau"],
         description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age
-                } ans et j'aime les ${this.animauxPreferes.join(', ')}.`;
-        },
-    },
+            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
+        }
+    }
 ];
 
 // Faire une boucle sur le tableau users
 // Afficher dans la console la description de chaque utilisateur
 
 // Utiliser la méthode for()
+for (let i = 0; i < users.length; i++) {
+    console.log(users[i].description());
+}
+
 // Utiliser la méthode forEach()
+users.forEach(user => console.log(user.description()));
+
 // Utiliser la méthode for(...of...)
+for (const iterator of users) {
+    console.log(iterator.description());
+}
 
 // Choisissez la méthode qui vous semble la plus adaptée pour itérer sur le tableau users
 // Boucler sur chaque utilisateur pour afficher toutes les informations de l'utilisateur
+for (const user of users) {
+    for (const key in user) {
+        console.log(key, user[key]);
+    }
+}
+
 
 // ---------------------------------- Partie 7 ----------------------------------
 
 const students = [
-    {
-        nom: 'Dupont',
-        prenom: 'Alice',
-        cours: ['Maths', 'Anglais', 'Histoire'],
-        notes: [14, 16, 18],
-    },
-    {
-        nom: 'Martin',
-        prenom: 'Bob',
-        cours: ['Physique', 'Espagnol', 'Géographie'],
-        notes: [12, 13, 15],
-    },
-    {
-        nom: 'Lefebvre',
-        prenom: 'Claire',
-        cours: ['Chimie', 'Allemand', 'SVT'],
-        notes: [9, 10, 11],
-    },
-    {
-        nom: 'Girard',
-        prenom: 'David',
-        cours: ['Français', 'Arts plastiques', 'Philosophie'],
-        notes: [17, 19, 14],
-    },
-    {
-        nom: 'Petit',
-        prenom: 'Emma',
-        cours: ['Latin', 'Musique', 'Sciences économiques'],
-        notes: [16, 11, 12],
-    },
-    {
-        nom: 'Moreau',
-        prenom: 'François',
-        cours: ['Sport', 'Théâtre', 'Informatique'],
-        notes: [11, 13, 15],
-    },
-    {
-        nom: 'Dubois',
-        prenom: 'Marc',
-        cours: ['Géométrie', 'Latin', 'Marketing'],
-        notes: [15, 12, 10],
-    },
-    {
-        nom: 'Garcia',
-        prenom: 'Hugo',
-        cours: ['Littérature', 'Musique', 'Droit'],
-        notes: [14, 17, 18],
-    },
-    {
-        nom: 'Roux',
-        prenom: 'Inès',
-        cours: ['Sociologie', 'Japonais', 'Chimie'],
-        notes: [10, 9, 12],
-    },
-    {
-        nom: 'Berger',
-        prenom: 'Jules',
-        cours: ['Géographie', 'Théâtre', 'Espagnol'],
-        notes: [13, 16, 14],
-    },
-    {
-        nom: 'Moulin',
-        prenom: 'Karine',
-        cours: ["Histoire de l'art", 'Anglais', 'Physique'],
-        notes: [17, 15, 18],
-    },
-    {
-        nom: 'David',
-        prenom: 'Lucie',
-        cours: ['Chinois', 'Marketing', 'SVT'],
-        notes: [12, 11, 9],
-    },
-    {
-        nom: 'Mercier',
-        prenom: 'Marc',
-        cours: ['Philosophie', 'Sport', 'Français'],
-        notes: [18, 13, 16],
-    },
-    {
-        nom: 'Fournier',
-        prenom: 'Nina',
-        cours: ['Informatique', 'Littérature', 'Musique'],
-        notes: [15, 14, 17],
-    },
-    {
-        nom: 'Morel',
-        prenom: 'Olivier',
-        cours: ['Espagnol', 'Chimie', 'Théâtre'],
-        notes: [13, 11, 16],
-    },
+    { nom: "Dupont", prenom: "Alice", cours: ["Maths", "Anglais", "Histoire"], notes: [14, 16, 18] },
+    { nom: "Martin", prenom: "Bob", cours: ["Physique", "Espagnol", "Géographie"], notes: [12, 13, 15] },
+    { nom: "Lefebvre", prenom: "Claire", cours: ["Chimie", "Allemand", "SVT"], notes: [9, 10, 11] },
+    { nom: "Girard", prenom: "David", cours: ["Français", "Arts plastiques", "Philosophie"], notes: [17, 19, 14] },
+    { nom: "Petit", prenom: "Emma", cours: ["Latin", "Musique", "Sciences économiques"], notes: [16, 11, 12] },
+    { nom: "Moreau", prenom: "François", cours: ["Sport", "Théâtre", "Informatique"], notes: [11, 13, 15] },
+    { nom: "Dubois", prenom: "Marc", cours: ["Géométrie", "Latin", "Marketing"], notes: [15, 12, 10] },
+    { nom: "Garcia", prenom: "Hugo", cours: ["Littérature", "Musique", "Droit"], notes: [14, 17, 18] },
+    { nom: "Roux", prenom: "Inès", cours: ["Sociologie", "Japonais", "Chimie"], notes: [10, 9, 12] },
+    { nom: "Berger", prenom: "Jules", cours: ["Géographie", "Théâtre", "Espagnol"], notes: [13, 16, 14] },
+    { nom: "Moulin", prenom: "Karine", cours: ["Histoire de l'art", "Anglais", "Physique"], notes: [17, 15, 18] },
+    { nom: "David", prenom: "Lucie", cours: ["Chinois", "Marketing", "SVT"], notes: [12, 11, 9] },
+    { nom: "Mercier", prenom: "Marc", cours: ["Philosophie", "Sport", "Français"], notes: [18, 13, 16] },
+    { nom: "Fournier", prenom: "Nina", cours: ["Informatique", "Littérature", "Musique"], notes: [15, 14, 17] },
+    { nom: "Morel", prenom: "Olivier", cours: ["Espagnol", "Chimie", "Théâtre"], notes: [13, 11, 16] }
 ];
 
 // Itérer sur le tableau students avec la méthode forEach()
@@ -415,7 +353,7 @@ const students = [
 
 // 4. Afficher dans la console le nom et la moyenne de chaque élève
 
-// 5. Afficher dans la console le nom et la moyenne de chaque élève
+// 5. Afficher dans la console le nom et la moyenne de chaque élève 
 // si la moyenne est supérieure ou égale à 15
 // Afficher dans la console 'vous obtenez une bourse'
 // Si la moyenne estsupérieure ou égale à 10
@@ -424,3 +362,15 @@ const students = [
 // Afficher dans la console 'vous allez en rattrapage'
 // Si la moyenne est inférieure à 9
 // Afficher dans la console 'vous redoublez'
+
+students.forEach(function (student) {
+    let moyenne = 0
+    for (let i = 0; i < student.notes.length; i++) {
+        moyenne += student.notes[i]
+    }
+    moyenne = parseInt(moyenne / student.notes.length)
+
+    if (student.prenom == 'Marc') {
+        console.log(student.nom, moyenne)
+    }
+})
