@@ -23,7 +23,7 @@
         |    ~~~~ [CD-ROM]  |
         |___________________|
 
-*/
+ */
 
 // ---------------------------------- Partie 1 ----------------------------------
 
@@ -175,8 +175,6 @@
 // Si la moyenne est supérieure ou égale à 7 => mention "Passable"
 // Si la moyenne est inférieure à 7 => mention "Insuffisant"
 
-// Utiliser switch pour faire la meme chose
-
 // Declaration d'un tableau qui contient les notes de l'utilisateur
 // Déclarer une fonction qui affiche dans la console la mention de l'utilisateur en fonction de sa moyenne
 // Calculer la moyenne de l'utilisateur
@@ -246,27 +244,14 @@ let users = [
 
 // Faire une boucle sur le tableau users
 // Afficher dans la console la description de chaque utilisateur
-
 // Utiliser la méthode for()
-for (let i = 0; i < users.length; i++) {
-    console.log(users[i].description());
-}
 
 // Utiliser la méthode forEach()
-users.forEach(user => console.log(user.description()));
 
 // Utiliser la méthode for(...of...)
-for (const iterator of users) {
-    console.log(iterator.description());
-}
 
 // Choisissez la méthode qui vous semble la plus adaptée pour itérer sur le tableau users
 // Boucler sur chaque utilisateur pour afficher toutes les informations de l'utilisateur
-for (const user of users) {
-    for (const key in user) {
-        console.log(key, user[key]);
-    }
-}
 
 
 // ---------------------------------- Partie 7 ----------------------------------
@@ -296,10 +281,10 @@ const students = [
 // 2. Afficher dans la console le nom et le prénom de chaque élève qui sont inscrits au cours de "Français" ou "Maths"
 
 // 3. Afficher dans la console le nom et le prénom de chaque élève qui ont ete reçus (utiliser la fonction que vous avez créée dans la partie 5)
-
+//
 // 4. Afficher dans la console le nom et la moyenne de chaque élève
 
-// 5. Afficher dans la console le nom et la moyenne de chaque élève 
+// 5. Afficher dans la console le nom et la moyenne de chaque élève
 // si la moyenne est supérieure ou égale à 15
 // Afficher dans la console 'vous obtenez une bourse'
 // Si la moyenne estsupérieure ou égale à 10
@@ -309,14 +294,3 @@ const students = [
 // Si la moyenne est inférieure à 9
 // Afficher dans la console 'vous redoublez'
 
-students.forEach(function (student) {
-    let moyenne = 0
-    for (let i = 0; i < student.notes.length; i++) {
-        moyenne += student.notes[i]
-    }
-    moyenne = parseInt(moyenne / student.notes.length)
-
-    if (student.prenom == 'Marc') {
-        console.log(student.nom, moyenne)
-    }
-})

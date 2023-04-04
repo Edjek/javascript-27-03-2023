@@ -395,8 +395,6 @@ function mention(note) {
     }
 }
 
-// Utiliser switch pour faire la meme chose
-
 
 // Déclaration d'un tableau qui contient les notes de l'utilisateur
 // Déclarer une fonction qui affiche dans la console la mention de l'utilisateur en fonction de sa moyenne
@@ -575,8 +573,18 @@ const students = [
 // Itérer sur le tableau students avec la méthode forEach()
 
 // 1. Afficher dans la console le nom et le prénom de chaque élève
+students.forEach(function (student) {
+    console.log(student.nom + ' ' + student.prenom);
+})
 
 // 2. Afficher dans la console le nom et le prénom de chaque élève qui sont inscrits au cours de "Français" ou "Maths"
+students.forEach(function (student) {
+    for (let cour of student.cours) {
+        if (cour == 'Français') {
+            console.log(student.nom);
+        }
+    }
+})
 
 // 3. Afficher dans la console le nom et le prénom de chaque élève qui ont ete reçus (utiliser la fonction que vous avez créée dans la partie 5)
 

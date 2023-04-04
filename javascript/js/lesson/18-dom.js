@@ -31,7 +31,7 @@ for (let i = 0; i < elementByClassName.length; i++) {
 }
 
 //  ? La methode `querySelector`
-const element = document.querySelector('p');
+const element = document.querySelector('.section p');
 element.style.color = 'green';
 
 /*
