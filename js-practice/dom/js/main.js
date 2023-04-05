@@ -1,22 +1,31 @@
-/*
-/*  ---------------------------------------------
+/*  
+    ------------------------------------
     Découverte de la manipulation du DOM
-    ---------------------------------------------
+    ------------------------------------
+*/
+
+/*
     En JavaScript, il existe plusieurs propriétés 
     pour accéder et modifier les éléments HTML sélectionnés dans le DOM. 
     Voici quelques-unes des propriétés les plus couramment utilisées :
-
 */
 
 // -------------------------- Selecteurs --------------------------
 
+const container = document.querySelector('#container')
 const title = document.querySelector('h1')
 const paragraphes = document.querySelectorAll('p')
 
 
 // -------------------------- Propriétés --------------------------
-
-title.style.color = '#844'
+container.style.width = '50%'
+container.style.margin = '50px auto'
+container.style.padding = '30px'
+container.style.boxShadow = '4px 8px 8px #0003'
+container.style.borderRadius = '5px'
+title.style.color = '#333'
+title.style.textAlign = 'center'
+title.style.textTransform = 'uppercase'
 title.innerHTML = 'Le javascript en pratique <em>modifié par le js</em>'
 
 
@@ -30,7 +39,7 @@ title.removeAttribute('title')
 
 // -------------------------- Class --------------------------
 
-title.classList.add('toto', 'tutu')
+title.classList.add('title', 'txt-red')
 title.classList.remove('toto')
 title.classList.toggle('super-titre')
 
@@ -41,18 +50,18 @@ console.log(title.classList.contains('tutu'));
 // En plus de `SetAttribut()` on peut manipuler certains attributs 
 // Avec des propriétés et des méthodes spécifiques
 const image = document.querySelector('img')
-image.src = 'coucou'
+image.src = 'img/chaton.jpg'
 
 const link = document.querySelector('a')
-link.href = ''
+link.setAttribute('target', '_blank')
+link.href = 'https://www.google.com'
 
 const input = document.querySelector('input')
-input.value = 'trere'
+input.value = 'js =>input.value'
 
 
 // -------------------------- Creation d'element --------------------------
 
-const container = document.querySelector('#container')
 const span = document.createElement('span')
 span.textContent = 'coucou, je suis une span crée par mon utilisateur'
 span.classList.add('txt-red')
@@ -64,9 +73,12 @@ container.prepend(span)
 span.remove()
 
 const p = container.querySelector('p')
-
+// Ajoute l'élément parent avant l'élément enfant
 console.log(p.parentElement);
 
+// -------------------------- Evenements --------------------------
+
+// e.target = l'élément html sur lequel on a reellement cliqué
 container.addEventListener('click', function (e) {
     e.target.style.backgroundColor = 'pink'
 })
