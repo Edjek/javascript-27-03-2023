@@ -6,45 +6,38 @@ element.addEventListener('click', function () {
 });
 
 // mouseover : se déclenche lorsqu'un élément est survolé par la souris.
-
 element.addEventListener('mouseover', function () {
   // action à effectuer lors du survol
 });
 
 // mouseout : se déclenche lorsqu'un élément n'est plus survolé par la souris.
-
 element.addEventListener('mouseout', function () {
   // action à effectuer lorsque le survol se termine
 });
 
 // keydown : se déclenche lorsqu'une touche du clavier est enfoncée.
-
 element.addEventListener('keydown', function (event) {
   // action à effectuer lors de l'appui sur une touche
   console.log(event.key);
 });
 
 // submit : se déclenche lorsqu'un formulaire est soumis (par exemple, en cliquant sur le bouton "envoyer").
-
 form.addEventListener('submit', function (event) {
   // action à effectuer lors de la soumission du formulaire
   event.preventDefault(); // pour éviter l'envoi du formulaire
 });
 
 // load : se déclenche lorsque la page ou une image est complètement chargée.
-
 window.addEventListener('load', function () {
   // action à effectuer après le chargement complet de la page
 });
 
 // scroll : se déclenche lorsqu'un élément est fait défiler (par exemple, une page Web).
-
 window.addEventListener('scroll', function () {
   // action à effectuer lors du défilement
 });
 
 // resize : se déclenche lorsque la taille de la fenêtre du navigateur est modifiée.
-
 window.addEventListener('resize', function () {
   // action à effectuer lors du changement de taille de la fenêtre
 });
