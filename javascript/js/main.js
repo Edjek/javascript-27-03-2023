@@ -18,7 +18,8 @@
     --16-- CALLBACK
     --17-- FONCTIONS AVANCEES
     --18-- MANIPULATION DU DOM
-    --19-- WINDOW
+    --19-- EVENT
+    --20-- WINDOW
 */
 
 /* --------------------------- 00 - COMMENTAIRES --------------------------- */
@@ -88,7 +89,7 @@ console.log("J'ai " + age + ' ans');
 console.log("J'ai " + age + ' ans');
 console.log(`J'ai ${age} ans`);
 
-let lastName  = 'Rachid';
+let lastName = 'Rachid';
 let firstName = 'EDJEKOUANE';
 console.log("Bonjour, je m'appelle " + firstName + ' ' + lastName);
 console.log("Bonjour, je m'appelle " + firstName + ' ' + lastName);
@@ -100,13 +101,13 @@ console.log(`Bonjour, je m'appelle ${firstName} ${lastName}`);
 let string2 = 'Je suis du texte';
 
 // Number (Tous les types d'ecritures numériques sont possibles : positif, negatif, decimal)
-let nombre  = 18;    //number
+let nombre = 18;    //number
 let decimal = 20.3;  //number
 let negatif = -10;   //number
 
 // Boolean (Booléens)
 // Variable de type booleen n'a que 2 valeurs possibles : TRUE ou FALSE
-let booleen  = true;   //boolean
+let booleen = true;   //boolean
 let booleen2 = false;  //boolean
 
 let nul = null; //null
@@ -145,9 +146,9 @@ console.log(`le resultat est ${operation}`); //1
 operation = 10 ** 3; //Puissance
 console.log(`le resultat est ${operation}`); //100
 
-let number  = prompt('Donnez-moi un nombre ?');
+let number = prompt('Donnez-moi un nombre ?');
 let number2 = prompt('Donnez-moi un deuxieme nombre ?');
-let result  = number * number2;
+let result = number * number2;
 console.log(`le resultat de la multiplication est ${result}`);
 
 /* --------------------------- 06 - INSTRUCTION CONDITIONNELLES --------------------------- */
@@ -487,9 +488,9 @@ console.log(prix); // affiche 3.99 dans la console
 // Les objets sont des structures de données complexes qui permettent de stocker des valeurs et des fonctions ensemble.
 
 const person = {
-    firstName   : 'rachid',
-    lastName    : 'edjekouane',
-    notes       : [10, 12, 19, 20],
+    firstName: 'rachid',
+    lastName: 'edjekouane',
+    notes: [10, 12, 19, 20],
     getFirstName: function () {
         return this.firstName;
     },
@@ -499,7 +500,7 @@ const person = {
     },
     brother: {
         firstName: 'malik',
-        lastName : 'edjekouane',
+        lastName: 'edjekouane',
     },
 };
 
@@ -522,10 +523,10 @@ let key = 'firstName';
 console.log(person[key]);
 
 const sangoku = {
-    firstName   : 'san',
-    lastName    : 'goku',
-    children    : ['gohan', 'goten'],
-    age         : 39,
+    firstName: 'san',
+    lastName: 'goku',
+    children: ['gohan', 'goten'],
+    age: 39,
     presentation: function () {
         return `Bonjour je m'appelle ${this.firstName} ${this.lastName} et jai ${this.children.length} enfants `;
     },
@@ -597,8 +598,8 @@ for (let animal of animals) {
 */
 const user = {
     firstName: 'John',
-    lastName : 'Doe',
-    age      : 30,
+    lastName: 'Doe',
+    age: 30,
 };
 
 // `for(...in...)` permet de parcourir les propriétés énumérables d'un objet
@@ -726,6 +727,8 @@ link.href = 'https://www.google.com';
 const input = document.querySelector('input');
 input.value = 'Je suis un input modifié en javascript';
 
+/* --------------------------- 19 - EVENT --------------------------- */
+
 /*  ---------------------------------------------
     Evénements en JavaScript
     ---------------------------------------------   
@@ -757,7 +760,7 @@ subTitle.addEventListener('click', function () {
     subTitle.classList.toggle('active');
 });
 
-/* --------------------------- 19 - Windows --------------------------- */
+/* --------------------------- 20 - WINDOW --------------------------- */
 
 /*
     Le DOM (Document Object Model) en JavaScript 

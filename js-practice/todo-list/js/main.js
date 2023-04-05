@@ -10,7 +10,6 @@ submit.addEventListener('click', function () {
         todoList.append(li)
         input.value = ''
     }
-
 })
 
 todoList.addEventListener('click', function (e) {
