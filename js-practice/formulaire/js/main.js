@@ -2,7 +2,13 @@ const form = document.querySelector('#form')
 
 form.addEventListener('submit', function (e) {
     e.preventDefault()
-    verifyForm()
+    const success = verifyForm()
+    if (success) {
+        setMessageSucces()
+        // form.submit()
+    } else {
+        console.log('pas bon');
+    }
 })
 
 function verifyForm() {
@@ -11,21 +17,22 @@ function verifyForm() {
     const password = document.querySelector('#password')
     const confirmPassword = document.querySelector('#confirm-password')
     removeMessageError()
+    let success = false;
     if (!name.value) {
         setMessageError(name, 'Veuillez remplir le champ')
-    }
-    if (!email.value) {
+    }else if (!email.value) {
         setMessageError(email, 'Veuillez remplir le champ')
-    } else if (isEmailValid(email.value)) {
+    } else if (isEmailValid(email.value)  == false) {
         setMessageError(email, 'Email invalid')
-    }
-
-    if (!password.value || !confirmPassword.value) {
-        setMessageError(password, 'Veuillez remplir le champ')
-
-    } else if (password.value !== confirmPassword) {
+    }else if (!password.value || !confirmPassword.value) {
+        setMessageError(password, 'Veuillez remplir les champs mot de passe')
+    } else if (password.value !== confirmPassword.value) {
         setMessageError(password, 'Les mots de passe ne correspondent pas')
+    } else {
+        success= true
     }
+    return success
+
 }
 
 function setMessageError(element, errorMessage) {
@@ -36,7 +43,7 @@ function setMessageError(element, errorMessage) {
 }
 
 function isEmailValid(email) {
-
+   return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,6}\.[a-zA-Z]{2,4}$/.test(email)
 }
 
 function removeMessageError() {
@@ -44,4 +51,11 @@ function removeMessageError() {
     messages.forEach((message) => {
         message.remove()
     })
+}
+
+function setMessageSucces(){
+    const elemSuccess = document.createElement('div')
+    elemSuccess.innerHTML ='<p>Votre formulaire a été envoyé</p>'
+    elemSuccess.classList.add('message')
+    form.append(elemSuccess)
 }
