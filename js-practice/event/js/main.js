@@ -31,12 +31,12 @@ window.addEventListener('load', function () {
 
 // L'événement "DOMContentLoaded" en JavaScript est déclenché 
 // lorsque la page HTML a été complètement chargée et analysée,
-// Sans attendre que les feuilles de style, images et sous-documents aient fini de charger.
+// Mais sans attendre que les feuilles de style, images et sous-documents aient fini de charger.
 window.addEventListener('DOMContentLoaded ', function () {
 })
 
 
-// Nous agrandissons la fenêtre pour pouvoir déclencher le défilement.
+// Nous agrandissons la fenêtre pour pouvoir visualiser le défilement.
 const body = document.querySelector('body')
 body.style.height = '1200px'
 
