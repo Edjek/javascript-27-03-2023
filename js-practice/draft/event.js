@@ -16,15 +16,15 @@ element.addEventListener('mouseout', function () {
 });
 
 // keydown : se déclenche lorsqu'une touche du clavier est enfoncée.
-element.addEventListener('keydown', function (event) {
+element.addEventListener('keydown', function (e) {
   // action à effectuer lors de l'appui sur une touche
-  console.log(event.key);
+  console.log(e.key);
 });
 
 // submit : se déclenche lorsqu'un formulaire est soumis (par exemple, en cliquant sur le bouton "envoyer").
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', function (e) {
   // action à effectuer lors de la soumission du formulaire
-  event.preventDefault(); // pour éviter l'envoi du formulaire
+  e.preventDefault(); // pour éviter l'envoi du formulaire
 });
 
 // load : se déclenche lorsque la page ou une image est complètement chargée.
