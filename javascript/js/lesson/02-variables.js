@@ -28,5 +28,5 @@ console.log(uneVariable);
 // On peut changer la valeur d'une variable
 helloWorld = 'Coucou';
 
-// Affectation d'une variable dans une autre variable
+// Affectation de la valeur d'une variable dans une autre variable
 let affectation = helloWorld;
