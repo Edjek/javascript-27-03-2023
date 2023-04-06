@@ -18,6 +18,7 @@ element.addEventListener('mouseout', function () {
 // keydown : se déclenche lorsqu'une touche du clavier est enfoncée.
 element.addEventListener('keydown', function (e) {
   // action à effectuer lors de l'appui sur une touche
+  // pour connaître la touche enfoncée, on peut utiliser la propriété key de l'objet event
   console.log(e.key);
 });
 
