@@ -13,9 +13,9 @@
 // lorsque tous les éléments de la page sont chargés.
 window.addEventListener('load', function () {
     const inputChange = document.querySelector('#input-change')
-    const inputInput  = document.querySelector('#input-input')
-    const spanChange  = document.querySelector('#span-change')
-    const spanInput   = document.querySelector('#span-input')
+    const inputInput = document.querySelector('#input-input')
+    const spanChange = document.querySelector('#span-change')
+    const spanInput = document.querySelector('#span-input')
 
     // L'événement "change" en JavaScript est déclenché 
     // lorsqu'un élément de formulaire change de valeur. 
@@ -34,7 +34,6 @@ window.addEventListener('load', function () {
 // Mais sans attendre que les feuilles de style, images et sous-documents aient fini de charger.
 window.addEventListener('DOMContentLoaded ', function () {
 })
-
 
 // Nous agrandissons la fenêtre pour pouvoir visualiser le défilement.
 const body = document.querySelector('body')
